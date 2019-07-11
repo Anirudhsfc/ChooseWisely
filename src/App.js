@@ -1,13 +1,19 @@
 import React from 'react';
-import logo from './logo.svg';
+
 import './App.css';
+import MainPage from '../src/pages/MainPage'
+import {Route,Switch} from 'react-router-dom'
 
 function App() {
   return (
-    <div >
+    
+    <Switch>
+    <Route path="/" exact component={MainPage}/>
+    
+    </Switch>
      
-    Welcome to Your Course Website- Replacing Triklo
-    </div>
+
+   
   );
 }
 

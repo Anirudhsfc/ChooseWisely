@@ -16,6 +16,10 @@ class AccountPage extends Component {
         this.state = {
             items: []
         };
+
+        this.init=this.init.bind(this)
+        this.showInfo=this.showInfo.bind(this)
+       
     }
     componentDidMount() {
         this.init();
@@ -52,9 +56,13 @@ class AccountPage extends Component {
         console.log("successful")
         // alert('Successfully processed!')
         console.log(data);
+        // console.log(this.state.items)
+        this.setState({items:data})
+        console.log(this.state.items)
         data.forEach(element => {
             // console.log("okay")
             console.log(element.CourseCode);
+
         });
     }
 
@@ -64,7 +72,7 @@ class AccountPage extends Component {
             <div>
                 {this.state.items.map(item =>
 
-                    <Card title={item.Name}></Card>
+                    <Card title={item.CourseCode}></Card>
 
                 )}
             </div>

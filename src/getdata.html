@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src=“https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"> </script> <script>
+    $(document).ready(function () {
+      $("#load").click(function () {
+        $.getJSON("https://sweb.hku.hk/student/servlet/SISApp.CourseSearchJson?param1=2&param2=GEOG", function (result) {
+          console.log("yupp")
+          $.each(result.data_list, function (i, row) {
+            console.log("acha")
+          });
+        });
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <h1>Weather forecast</h1>
+  <div id="load">
+    <button>FIND DATA</button>
+
+</body>
+
+</html>

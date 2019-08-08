@@ -12,8 +12,8 @@ function App() {
   return (
 
     <BrowserRouter basename="/ChooseWisely">
-      {/* <Link to="/">Home</Link>
-      <Link to="/mainPage">MainPage</Link> */}
+      <Link to="/">Home</Link>
+      <Link to="/mainPage">MainPage</Link>
       <Route path="/" exact component={MainPage} />
       <Route path="/mainPage" component={MainPage} />
       <Route path="/coursePage1" component={Page1} />

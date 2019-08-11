@@ -49,19 +49,30 @@ class AccountPage extends Component {
         Tabletop.init({
             key: publicSpreadsheetUrl,
             callback: this.showInfo,
-            simpleSheet: true
+            simpleSheet: true,
+            postProcess:this.process
         })
+    }
+
+    process(element){
+        console.log("INSIDE PRIOCESS")
+        // console.log(element.coursecode)
+        if(element.coursecode=="AAAA"){
+            console.log(element.coursecode)
+            element["coursecode"]=element["coursecode"]+"A"
+        }
+        element["timestamp"]=Date.parse(element["displaydate"]);
     }
     showInfo(data, tabletop) {
         console.log("successful")
         // alert('Successfully processed!')
-        console.log(data);
+        // console.log(data);
         // console.log(this.state.items)
         this.setState({items:data})
-        console.log(this.state.items)
+        // console.log(this.state.items)
         data.forEach(element => {
             // console.log("okay")
-            console.log(element.CourseCode);
+            // console.log(element.CourseCode);
 
         });
     }

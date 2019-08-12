@@ -1,599 +1,5 @@
 export default {
-  "BBMS": [
-    { "code": "BBMS2004", "title": "Introduction to Human Anatomy" },
-    {
-      "code": "BBMS2006",
-      "title": "Physiological Basis of Health and Disease"
-    },
-    { "code": "BBMS2007", "title": "Essential Molecular Biology" },
-    { "code": "BBMS2009", "title": "Introduction to Clinical Research" },
-    { "code": "BBMS3001", "title": "Medical Microbiology" },
-    { "code": "BBMS3002", "title": "Molecular Biology of the Cell" },
-    { "code": "BBMS3009", "title": "Genome Science" },
-    { "code": "BBMS3010", "title": "Emerging Infections" },
-    { "code": "BBMS3011", "title": "Molecular Neuroscience" },
-    { "code": "BBMS3018", "title": "Biomechanics and Biomedical Technologies" },
-    {
-      "code": "BBMS3012",
-      "title": "Stem Cell Biotechnologies in Regenerative Medicine"
-    },
-    { "code": "BBMS4003", "title": "Developmental Genetics" },
-    { "code": "BBMS4011FY", "title": "Biomedical Innovation Team Project" },
-    { "code": "BBMS1001", "title": "Human Biology" },
-    {
-      "code": "BBMS1002",
-      "title": "Fundamentals of Human Anatomy and Physiology"
-    },
-    { "code": "BBMS2001", "title": "Basic Biomedical Laboratory Techniques" },
-    { "code": "BBMS2003", "title": "Human Genetics" },
-    { "code": "BBMS2005", "title": "Biomedical Pharmacology" },
-    {
-      "code": "BBMS2008",
-      "title": "Contemporary Topics in Biomedical Technology"
-    },
-    {
-      "code": "BBMS2011",
-      "title": "Research Methods in Medicine and Health Sciences"
-    },
-    { "code": "BBMS3003", "title": "Mechanisms and Pathology of Diseases" },
-    { "code": "BBMS3004", "title": "Molecular Diagnostics Laboratory" },
-    { "code": "BBMS3005", "title": "Infection and Immunity" },
-    { "code": "BBMS3007", "title": "Cancer Biology" },
-    { "code": "BBMS3008", "title": "Essential Proteomics" },
-    { "code": "BBMS4001", "title": "Final Year Project" },
-    { "code": "BBMS4004", "title": "Public Health Genetics" },
-    { "code": "BBMS4011", "title": "Biomedical Innovation Team Project" }
-  ],
-  "BCHM": [
-    { "code": "BCHM1601", "title": "Foundation Theories of Chinese Medicine" },
-    { "code": "BCHM2601", "title": "Chinese Materia Medica" },
-    { "code": "BCHM2602", "title": "Archaic Chinese Medical Literature" },
-    {
-      "code": "BCHM2607FY",
-      "title": "Medical Ethics and Professionalism in Chinese Medicine Practice"
-    },
-    { "code": "BCHM3601", "title": "Canon of Chinese Medicine" },
-    { "code": "BCHM3602FY", "title": "Chinese Internal Medicine" },
-    { "code": "BCHM3605", "title": "Immunology" },
-    { "code": "BCHM3606FY", "title": "Pathology" },
-    { "code": "BCHM4604", "title": "Surgery of Chinese Medicine" },
-    { "code": "BCHM4605", "title": "Gynaecology of Chinese Medicine" },
-    { "code": "BCHM4606", "title": "Otorhinolaryngology of Chinese Medicine" },
-    { "code": "BCHM4608", "title": "Fundamentals of Diagnosis" },
-    { "code": "BCHM4608FY", "title": "Fundamentals of Diagnosis" },
-    {
-      "code": "BCHM5601",
-      "title": "Life Cultivation and Healthcare of Chinese Medicine"
-    },
-    { "code": "BCHM5603", "title": "Seasonal Febrile Diseases" },
-    {
-      "code": "BCHM5604",
-      "title": "Therapeutics in Acupuncture and Moxibustion"
-    },
-    { "code": "BCHM5608", "title": "Ophthalmology of Chinese Medicine" },
-    {
-      "code": "BCHM5610FY",
-      "title": "Chinese Medicine Clinical Attachment IV"
-    },
-    { "code": "BCHM6601FY", "title": "Clinical Clerkship" },
-    { "code": "BCHM1602", "title": "Diagnostics of Chinese Medicine" },
-    { "code": "BCHM1605", "title": "History of Chinese Medicine" },
-    { "code": "BCHM1901", "title": "Introduction to Chinese Medical Cultures" },
-    {
-      "code": "BCHM1905",
-      "title": "Resources and Quality Control of Chinese medicines"
-    },
-    { "code": "BCHM2603", "title": "Chinese Medicine Prescriptions" },
-    {
-      "code": "BCHM2607",
-      "title": "Medical Ethics and Professionalism in Chinese Medicine Practice"
-    },
-    { "code": "BCHM3602", "title": "Chinese Internal Medicine" },
-    { "code": "BCHM3603", "title": "Foundation of Acupuncture" },
-    { "code": "BCHM3606", "title": "Pathology" },
-    {
-      "code": "BCHM3801",
-      "title": "Introduction to Chinese Medicine and Nursing"
-    },
-    { "code": "BCHM4601", "title": "Treatise on Exogenous Febrile Diseases" },
-    {
-      "code": "BCHM4602",
-      "title": "Traumatology and Orthopaedics of Chinese Medicine"
-    },
-    { "code": "BCHM4603", "title": "Tui-na of Chinese Medicine" },
-    {
-      "code": "BCHM4610",
-      "title": "Evidence-based Practice and Public Health"
-    },
-    { "code": "BCHM5602", "title": "Golden Chamber" },
-    { "code": "BCHM5605", "title": "Schools of Thought of Chinese Medicine" },
-    { "code": "BCHM5606", "title": "Paediatrics of Chinese Medicine" },
-    { "code": "BCHM5607", "title": "Pharmacology of Chinese Medicine" },
-    { "code": "BCHM5609", "title": "Medicine" },
-    { "code": "BCHM5610", "title": "Chinese Medicine Clinical Attachment IV" },
-    { "code": "BCHM6601", "title": "Clinical Clerkship" }
-  ],
-  "BMSC": [
-    { "code": "BMSC1101", "title": "Life Science I" },
-    { "code": "BMSC2102", "title": "Life Science II" },
-    { "code": "BMSC3104", "title": "Life Science IV" },
-    { "code": "BMSC2203", "title": "Life Science III" }
-  ],
-  "BMSN": [
-    { "code": "BMSN1101", "title": "Foundation of Life Science" },
-    { "code": "BMSN2101", "title": "Life Science I" },
-    { "code": "BMSN3101", "title": "Life Science III" },
-    { "code": "BMSN2202", "title": "Life Science II" }
-  ],
-  "BPHM": [
-    { "code": "BPHM2114", "title": "Anatomy, Physiology & Pathophysiology II" },
-    { "code": "BPHM2137", "title": "Essential Organic Chemistry" },
-    { "code": "BPHM2141", "title": "Pharmacology and Clinical Pharmacy I" },
-    { "code": "BPHM3115", "title": "Microbiology and Immunology" },
-    { "code": "BPHM3132", "title": "Dosage Form Design" },
-    { "code": "BPHM3143", "title": "Pharmacology and Clinical Pharmacy III" },
-    { "code": "BPHM3144", "title": "Pharmacology and Clinical Pharmacy IV" },
-    {
-      "code": "BPHM3151",
-      "title": "Principles of Pharmacognosy, Herbal Medicines & Nutraceuticals"
-    },
-    { "code": "BPHM4124", "title": "Pharmacy Practice III" },
-    { "code": "BPHM4135", "title": "Industrial Drug Development" },
-    { "code": "BPHM4148", "title": "Clinical Pharmacy" },
-    { "code": "BPHM4151", "title": "Cosmetic Science" },
-    { "code": "BPHM2123", "title": "Pharmacy Practice II" },
-    { "code": "BPHM2131", "title": "Physicochemical Principles of Pharmacy" },
-    {
-      "code": "BPHM2136",
-      "title": "Physical Chemistry: Principles and Applications in Pharmaceutical Sciences"
-    },
-    { "code": "BPHM2142", "title": "Pharmacology and Clinical Pharmacy II" },
-    {
-      "code": "BPHM3133",
-      "title": "Medicinal Chemistry for Pharmacy Students"
-    },
-    { "code": "BPHM3134", "title": "Advanced Pharmaceutics" },
-    { "code": "BPHM3145", "title": "Pharmacology and Clinical Pharmacy V" },
-    { "code": "BPHM3146", "title": "Advanced Pharmacology" },
-    { "code": "BPHM4125", "title": "Pharmacy Practice IV" },
-    { "code": "BPHM4143", "title": "Epidemiology and Precision Medicine" },
-    { "code": "BPHM4147", "title": "Toxicology & Drug Abuse" },
-    {
-      "code": "BPHM4149",
-      "title": "Clinical Pharmacology & Advanced Clinical Pharmacy"
-    },
-    { "code": "BPHM4152", "title": "Chinese Medicine for Pharmacy Students" }
-  ],
-  "CMED": [
-    { "code": "CMED2004", "title": "Behavioural Sciences I" },
-    { "code": "CMED6000", "title": "Capstone" },
-    { "code": "CMED6000FY", "title": "Capstone" },
-    { "code": "CMED6100", "title": "Introduction to Biostatistics" },
-    { "code": "CMED6107", "title": "Advanced Immunology" },
-    { "code": "CMED6200", "title": "Introduction to Epidemiology" },
-    { "code": "CMED6201", "title": "Principles of Public Health" },
-    { "code": "CMED6203", "title": "Measurement in Health" },
-    { "code": "CMED6204", "title": "Health and Society" },
-    { "code": "CMED6224", "title": "Practicum" },
-    { "code": "CMED6224FY", "title": "Practicum" },
-    { "code": "CMED6227", "title": "Biological Basis of Disease" },
-    { "code": "CMED6269", "title": "Introduction to Medical Law" },
-    { "code": "CMED6271", "title": "Bioethics Foundations" },
-    { "code": "CMED6272", "title": "The Physician-patient Relationship" },
-    {
-      "code": "CMED6275",
-      "title": "The Legal Foundations of Global Health and Development"
-    },
-    { "code": "CMED6300", "title": "Intermediate Epidemiology" },
-    { "code": "CMED6704", "title": "Health Behaviour and Communication" },
-    { "code": "CMED6901", "title": "Health leadership and management" },
-    { "code": "CMED7100", "title": "Introduction to Biostatistics" },
-    { "code": "CMED7200", "title": "Introduction to Epidemiology" },
-    { "code": "CMED2005", "title": "Behavioural Sciences II" },
-    { "code": "CMED6020", "title": "Advanced Statistical Methods I" },
-    { "code": "CMED6030", "title": "Advanced Epidemiological Methods I" },
-    {
-      "code": "CMED6104",
-      "title": "Emerging infectious diseases and \"one health\""
-    },
-    { "code": "CMED6105", "title": "Infectious Diseases in Public Health" },
-    {
-      "code": "CMED6109",
-      "title": "Accounting and Financial Management in Health Care"
-    },
-    { "code": "CMED6202", "title": "The Practice of Public Health" },
-    { "code": "CMED6211", "title": "Infectious Disease Epidemiology" },
-    { "code": "CMED6217", "title": "Qualitative Health Research" },
-    {
-      "code": "CMED6218",
-      "title": "Human Health: Futures in a Globalized World"
-    },
-    { "code": "CMED6250", "title": "The Regulation of Biomedical Research" },
-    { "code": "CMED6274", "title": "The Beginning and End of Life" },
-    { "code": "CMED6291", "title": "Mental Disability and the Law" },
-    { "code": "CMED6900", "title": "Health Policy and Politics" },
-    { "code": "CMED6902", "title": "Health Economics" },
-    { "code": "CMED6907", "title": "Perspectives in Health Care Management" },
-    { "code": "CMED6909", "title": "Comparing Systems of Elder Care" },
-    {
-      "code": "CMED6912",
-      "title": "Environmental health hazards and interventions"
-    }
-  ],
-  "NURS": [
-    { "code": "NURS1300", "title": "Nursing Foundations" },
-    { "code": "NURS3300", "title": "Nursing Care of the Adult II" },
-    { "code": "NURS3506", "title": "Nursing Care of the Adult II" },
-    { "code": "NURS4306", "title": "Introduction to Nursing Research" },
-    { "code": "NURS4502", "title": "Consolidation Practicum" },
-    { "code": "NURS5303", "title": "Evidence Based Practice" },
-    { "code": "NURS1506", "title": "Nursing & Public Health" },
-    { "code": "NURS1509", "title": "Families in Health & Illness" },
-    { "code": "NURS1514", "title": "Nursing Knowledge and Practice" },
-    { "code": "NURS2511", "title": "Professional Issues in Nursing" },
-    { "code": "NURS2521", "title": "Chronic Disease Management" },
-    { "code": "NURS3511", "title": "Community Nursing and Public Health" },
-    {
-      "code": "NURS7102",
-      "title": "Research Methods for Health Professionals"
-    },
-    { "code": "NURS7106", "title": "Epidemiology and Critical Appraisal" },
-    { "code": "NURS7201", "title": "Legal and Ethical Issues in Nursing" },
-    { "code": "NURS7302FY", "title": "Dissertation" },
-    { "code": "NURS8224", "title": "Translational Nursing Research" },
-    { "code": "NURS8225", "title": "Foundation of Infection Control" },
-    {
-      "code": "NURS8231",
-      "title": "Managing Clients with Complex Surgical and Health Problems"
-    },
-    {
-      "code": "NURS8239",
-      "title": "Advanced Practice Nursing Roles in Critical Care"
-    },
-    { "code": "NURS8245", "title": "Managing Emergencies in Critical Care" },
-    {
-      "code": "NURS8249",
-      "title": "Human Resources and Information Management"
-    },
-    {
-      "code": "NURS8250",
-      "title": "Organizational Development and Global Trend"
-    },
-    { "code": "NURS1302", "title": "Health Promotion & Education" },
-    { "code": "NURS2301", "title": "Nursing Care of the Adult I" },
-    { "code": "NURS2302", "title": "Nursing Practicum I" },
-    { "code": "NURS3301", "title": "Nursing Care of the Adult III" },
-    { "code": "NURS3302", "title": "Nursing Theories and Models" },
-    { "code": "NURS3304", "title": "Nursing Practicum IIa" },
-    { "code": "NURS3305", "title": "Nursing Practicum IIb" },
-    { "code": "NURS4302", "title": "Statistics" },
-    { "code": "NURS4304", "title": "Community and Global Health Nursing I" },
-    { "code": "NURS4305", "title": "Gerontological Nursing" },
-    { "code": "NURS4307", "title": "Nursing Practicum IIIa" },
-    { "code": "NURS4308", "title": "Nursing Practicum IIIb" },
-    { "code": "NURS5304", "title": "Nursing Practicum IVa" },
-    { "code": "NURS5305", "title": "Nursing Practicum IVb" },
-    {
-      "code": "NURS8228",
-      "title": "Administration and Responsibility of the Infection Control Team"
-    },
-    {
-      "code": "NURS1513",
-      "title": "Promoting the Health of Individuals and Populations"
-    },
-    { "code": "NURS1515", "title": "Health Assessment" },
-    { "code": "NURS1517", "title": "Introduction to Nursing Research" },
-    { "code": "NURS2506", "title": "Management & Leadership in Health Care" },
-    { "code": "NURS2510", "title": "Epidemiology and Population Health" },
-    { "code": "NURS3504", "title": "Mental Health Nursing" },
-    { "code": "NURS3505", "title": "Advanced Nursing Care of the Adult" },
-    { "code": "NURS7101", "title": "Philosophy & Science of Nursing" },
-    { "code": "NURS7103", "title": "Health Maintenance and Promotion" },
-    { "code": "NURS7105", "title": "Advanced Health Assessment" },
-    { "code": "NURS7302", "title": "Dissertation" },
-    { "code": "NURS8102", "title": "Health Care Systems and Policy" },
-    {
-      "code": "NURS8205",
-      "title": "Tobacco Dependency Nursing Intervention and Management"
-    },
-    {
-      "code": "NURS8207",
-      "title": "Advanced Practice in Public Health Nursing: Assessment of Aggregate Need"
-    },
-    { "code": "NURS8222", "title": "Statistical Practice in Health Sciences" },
-    { "code": "NURS8226", "title": "Infection Control in Practice" },
-    {
-      "code": "NURS8232",
-      "title": "Therapeutic Nurse-client Relationships in Advanced Surgical Nursing"
-    },
-    {
-      "code": "NURS8233",
-      "title": "Advanced Practice Nursing Roles in Surgical Nursing"
-    },
-    {
-      "code": "NURS8247",
-      "title": "Managing Change & Innovation and Nursing Leadership"
-    },
-    {
-      "code": "NURS8248",
-      "title": "Operations Management and Quality & Safety"
-    }
-  ],
-  "PHAR": [
-    { "code": "PHAR3334", "title": "Clinical Pharmacology for Nurses" },
-    { "code": "PHAR4612", "title": "Clinical Pharmacology" },
-    { "code": "PHAR6100", "title": "Principles of Drug Action" },
-    {
-      "code": "PHAR6201",
-      "title": "Advanced drug delivery and drug development"
-    },
-    { "code": "PHAR6203", "title": "Vascular biology and therapeutics" },
-    {
-      "code": "PHAR6202",
-      "title": "Drugs for the treatment of heart and lung diseases"
-    },
-    { "code": "PHAR7300", "title": "Therapeutic Antibodies" }
-  ],
-  "DENT": [
-    { "code": "DENT1001", "title": "Dentistry: Integrated Semester I" },
-    { "code": "DENT2001", "title": "Dentistry: Integrated Semester III" },
-    { "code": "DENT3001", "title": "Dentistry: Integrated Semester V" },
-    { "code": "DENT4001", "title": "Dentistry: Integrated Semester VII" },
-    { "code": "DENT5001", "title": "Dentistry: Integrated Semester IX" },
-    { "code": "DENT6101", "title": "Dentistry: Integrated Semester XI" },
-    {
-      "code": "DENT7100FY",
-      "title": "Capstone Experience: Clinical Portfolio I"
-    },
-    {
-      "code": "DENT7101FY",
-      "title": "Capstone Experience: Clinical Portfolio II"
-    },
-    {
-      "code": "DENT7102FY",
-      "title": "Capstone Experience: Clinical Portfolio III"
-    },
-    { "code": "DENT7103FY", "title": "Endodontic consultation clinic I" },
-    { "code": "DENT7104FY", "title": "Endodontic consultation clinic II" },
-    { "code": "DENT7105FY", "title": "Endodontic consultation clinic III" },
-    { "code": "DENT7106FY", "title": "Endodontics introduction" },
-    { "code": "DENT7107FY", "title": "Joint (interdisciplinary) seminars I" },
-    { "code": "DENT7108FY", "title": "Joint (interdisciplinary) seminars II" },
-    { "code": "DENT7109FY", "title": "Joint (interdisciplinary) seminars III" },
-    { "code": "DENT7110FY", "title": "Operative technique fundamentals" },
-    { "code": "DENT7111FY", "title": "Practical endodontic techniques" },
-    { "code": "DENT7112FY", "title": "Practical endodontic techniques" },
-    { "code": "DENT7113FY", "title": "Practical endodontic techniques" },
-    { "code": "DENT7114FY", "title": "Publication and presentations" },
-    { "code": "DENT7115FY", "title": "Research I" },
-    { "code": "DENT7116FY", "title": "Research II" },
-    { "code": "DENT7117FY", "title": "Research III" },
-    { "code": "DENT7118FY", "title": "Supervised clinical practice I" },
-    { "code": "DENT7119FY", "title": "Supervised clinical practice II" },
-    { "code": "DENT7120FY", "title": "Supervised clinical practice III" },
-    { "code": "DENT7121FY", "title": "Tutorials in the discipline - Year 1" },
-    { "code": "DENT7122FY", "title": "Tutorials in the discipline - Year 2" },
-    { "code": "DENT7123FY", "title": "Tutorials in the discipline - Year 3" },
-    {
-      "code": "DENT7150FY",
-      "title": "Capstone Experience: Clinical Portfolio"
-    },
-    { "code": "DENT7151FY", "title": "Clinical Implant Dentistry I" },
-    { "code": "DENT7152FY", "title": "Clinical Implant Dentistry II" },
-    { "code": "DENT7153FY", "title": "Clinical Implant Dentistry III" },
-    { "code": "DENT7154FY", "title": "Comprehensive Treatment Planning I" },
-    { "code": "DENT7155FY", "title": "Comprehensive Treatment Planning II" },
-    { "code": "DENT7156FY", "title": "Comprehensive Treatment Planning III" },
-    { "code": "DENT7157FY", "title": "Evaluating Scientific Research I" },
-    { "code": "DENT7158FY", "title": "Evaluating Scientific Research II" },
-    {
-      "code": "DENT7159FY",
-      "title": "Implant Dentistry for Surgical Disciplines I"
-    },
-    {
-      "code": "DENT7160FY",
-      "title": "Implant Dentistry for Surgical Disciplines II"
-    },
-    { "code": "DENT7161FY", "title": "Original Research" },
-    { "code": "DENT7162FY", "title": "Research project I" },
-    { "code": "DENT7163FY", "title": "Research Project II" },
-    {
-      "code": "DENT7200FY",
-      "title": "Capstone Experience: Clinical Portfolio"
-    },
-    { "code": "DENT7201FY", "title": "Clinical Skill I" },
-    { "code": "DENT7202FY", "title": "Clinical Skill II" },
-    {
-      "code": "DENT7205FY",
-      "title": "Principles of Oral & Maxillofacial Surgery II"
-    },
-    { "code": "DENT7207FY", "title": "Research Project" },
-    {
-      "code": "DENT7250FY",
-      "title": "Capstone Experience: Clinical Portfolio"
-    },
-    { "code": "DENT7251FY", "title": "Clinical orthodontics 1" },
-    { "code": "DENT7253FY", "title": "Clinical orthodontics 3" },
-    { "code": "DENT7255FY", "title": "Original Research 3" },
-    {
-      "code": "DENT7256FY",
-      "title": "Orthodontic diagnosis and treatment planning 1"
-    },
-    {
-      "code": "DENT7258FY",
-      "title": "Orthodontic diagnosis and treatment planning 3"
-    },
-    {
-      "code": "DENT7300FY",
-      "title": "Capstone Experience: Clinical Portfolio"
-    },
-    { "code": "DENT7301FY", "title": "Clinical Paediatric Dentistry" },
-    { "code": "DENT7302FY", "title": "Didactic Paediatric Dentistry" },
-    { "code": "DENT7303FY", "title": "Research Project" },
-    { "code": "DENT7350FY", "title": "Basic Perio Science I" },
-    { "code": "DENT7351FY", "title": "Basic Perio Science II" },
-    { "code": "DENT7352FY", "title": "Basic Perio Science III" },
-    {
-      "code": "DENT7353FY",
-      "title": "Capstone Experience: Clinical Portfolio"
-    },
-    {
-      "code": "DENT7354FY",
-      "title": "Case Presentations plus Clinical Topics"
-    },
-    { "code": "DENT7355FY", "title": "Classic Literature I" },
-    { "code": "DENT7356FY", "title": "Classic Literature II" },
-    { "code": "DENT7357FY", "title": "Classic Literature III" },
-    { "code": "DENT7358FY", "title": "Clinic (incl. pre-clinic)" },
-    { "code": "DENT7359FY", "title": "Current Literature I" },
-    { "code": "DENT7360FY", "title": "Current Literature II" },
-    { "code": "DENT7361FY", "title": "Current Literature III" },
-    { "code": "DENT7362FY", "title": "Joint Sessions I" },
-    { "code": "DENT7363FY", "title": "Joint Sessions II" },
-    { "code": "DENT7364FY", "title": "Joint Sessions III" },
-    { "code": "DENT7365FY", "title": "Project Report and Oral Examination" },
-    { "code": "DENT7505", "title": "Biomaterials I" },
-    { "code": "DENT7506", "title": "Biomaterials II" },
-    {
-      "code": "DENT6023",
-      "title": "Oral epidemiology and clinical research methodology"
-    },
-    { "code": "DENT1002", "title": "Dentistry: Integrated Semester II" },
-    { "code": "DENT1030", "title": "Clinical Skills Block" },
-    { "code": "DENT2002", "title": "Dentistry: Integrated Semester IV" },
-    { "code": "DENT2030", "title": "Clinical Skills Block" },
-    { "code": "DENT3002", "title": "Dentistry: Integrated Semester VI" },
-    { "code": "DENT3030", "title": "Clinical Skills Block" },
-    { "code": "DENT4002", "title": "Dentistry: Integrated Semester VIII" },
-    { "code": "DENT4030", "title": "Clinical Skills Block" },
-    { "code": "DENT5002", "title": "Dentistry: Integrated Semester X" },
-    { "code": "DENT5030", "title": "Clinical Skills Block" },
-    { "code": "DENT5032", "title": "Community Health" },
-    { "code": "DENT6102", "title": "Dentistry: Integrated Semester XII" },
-    { "code": "DENT6130", "title": "Clinical Skills Block" },
-    { "code": "DENT6131", "title": "International Capstone Experience" },
-    {
-      "code": "DENT7030",
-      "title": "Dissertation Writing for Master of Dental Surgery and Master of Science \u2013 An Induction Course"
-    },
-    {
-      "code": "DENT7031",
-      "title": "Insights into stem cells and tissue engineering in dentistry"
-    },
-    {
-      "code": "DENT7032",
-      "title": "Diagnostic and advanced dental and maxillofacial imaging"
-    },
-    {
-      "code": "DENT7100",
-      "title": "Capstone Experience: Clinical Portfolio I"
-    },
-    {
-      "code": "DENT7101",
-      "title": "Capstone Experience: Clinical Portfolio II"
-    },
-    {
-      "code": "DENT7102",
-      "title": "Capstone Experience: Clinical Portfolio III"
-    },
-    { "code": "DENT7103", "title": "Endodontic consultation clinic I" },
-    { "code": "DENT7104", "title": "Endodontic consultation clinic II" },
-    { "code": "DENT7105", "title": "Endodontic consultation clinic III" },
-    { "code": "DENT7106", "title": "Endodontics introduction" },
-    { "code": "DENT7107", "title": "Joint (interdisciplinary) seminars I" },
-    { "code": "DENT7108", "title": "Joint (interdisciplinary) seminars II" },
-    { "code": "DENT7109", "title": "Joint (interdisciplinary) seminars III" },
-    { "code": "DENT7110", "title": "Operative technique fundamentals" },
-    { "code": "DENT7111", "title": "Practical endodontic techniques" },
-    { "code": "DENT7112", "title": "Practical endodontic techniques" },
-    { "code": "DENT7113", "title": "Practical endodontic techniques" },
-    { "code": "DENT7114", "title": "Publication and presentations" },
-    { "code": "DENT7115", "title": "Research I" },
-    { "code": "DENT7116", "title": "Research II" },
-    { "code": "DENT7117", "title": "Research III" },
-    { "code": "DENT7118", "title": "Supervised clinical practice I" },
-    { "code": "DENT7119", "title": "Supervised clinical practice II" },
-    { "code": "DENT7120", "title": "Supervised clinical practice III" },
-    { "code": "DENT7121", "title": "Tutorials in the discipline - Year 1" },
-    { "code": "DENT7122", "title": "Tutorials in the discipline - Year 2" },
-    { "code": "DENT7123", "title": "Tutorials in the discipline - Year 3" },
-    { "code": "DENT7150", "title": "Capstone Experience: Clinical Portfolio" },
-    { "code": "DENT7151", "title": "Clinical Implant Dentistry I" },
-    { "code": "DENT7152", "title": "Clinical Implant Dentistry II" },
-    { "code": "DENT7153", "title": "Clinical Implant Dentistry III" },
-    { "code": "DENT7154", "title": "Comprehensive Treatment Planning I" },
-    { "code": "DENT7155", "title": "Comprehensive Treatment Planning II" },
-    { "code": "DENT7156", "title": "Comprehensive Treatment Planning III" },
-    { "code": "DENT7157", "title": "Evaluating Scientific Research I" },
-    { "code": "DENT7158", "title": "Evaluating Scientific Research II" },
-    {
-      "code": "DENT7159",
-      "title": "Implant Dentistry for Surgical Disciplines I"
-    },
-    {
-      "code": "DENT7160",
-      "title": "Implant Dentistry for surgical disciplines II"
-    },
-    { "code": "DENT7161", "title": "Original Research" },
-    { "code": "DENT7162", "title": "Research Project I" },
-    { "code": "DENT7163", "title": "Research Project II" },
-    {
-      "code": "DENT7164",
-      "title": "Comprehensive Decision Making with Dental Implants"
-    },
-    { "code": "DENT7200", "title": "Capstone Experience: Clinical Portfolio" },
-    { "code": "DENT7201", "title": "Clinical Skill I" },
-    { "code": "DENT7202", "title": "Clinical Skill II" },
-    {
-      "code": "DENT7204",
-      "title": "Principles of Oral & Maxillofacial Surgery I"
-    },
-    {
-      "code": "DENT7205",
-      "title": "Principles of Oral & Maxillofacial Surgery II"
-    },
-    { "code": "DENT7207", "title": "Research Project" },
-    { "code": "DENT7250", "title": "Capstone Experience: Clinical Portfolio" },
-    { "code": "DENT7251", "title": "Clinical orthodontics 1" },
-    { "code": "DENT7253", "title": "Clinical orthodontics 3" },
-    { "code": "DENT7255", "title": "Original Research 3" },
-    {
-      "code": "DENT7256",
-      "title": "Orthodontic diagnosis and treatment planning 1"
-    },
-    {
-      "code": "DENT7258",
-      "title": "Orthodontic diagnosis and treatment planning 3"
-    },
-    { "code": "DENT7300", "title": "Capstone Experience: Clinical Portfolio" },
-    { "code": "DENT7301", "title": "Clinical Paediatric Dentistry" },
-    { "code": "DENT7302", "title": "Didactic Paediatric Dentistry" },
-    { "code": "DENT7303", "title": "Research Project" },
-    { "code": "DENT7350", "title": "Basic Perio Science I" },
-    { "code": "DENT7351", "title": "Basic Perio Science II" },
-    { "code": "DENT7352", "title": "Basic Perio Science III" },
-    { "code": "DENT7353", "title": "Capstone Experience: Clinical Portfolio" },
-    { "code": "DENT7354", "title": "Case Presentations plus Clinical Topics" },
-    { "code": "DENT7355", "title": "Classic Literature I" },
-    { "code": "DENT7356", "title": "Classic Literature II" },
-    { "code": "DENT7357", "title": "Classic Literature III" },
-    { "code": "DENT7358", "title": "Clinic (incl. pre-clinic)" },
-    { "code": "DENT7359", "title": "Current Literature I" },
-    { "code": "DENT7360", "title": "Current Literature II" },
-    { "code": "DENT7361", "title": "Current Literature III" },
-    { "code": "DENT7362", "title": "Joint Sessions I" },
-    { "code": "DENT7363", "title": "Joint Sessions II" },
-    { "code": "DENT7364", "title": "Joint Sessions III" },
-    { "code": "DENT7365", "title": "Project Report and Oral Examination" },
-    {
-      "code": "DENT6024",
-      "title": "Introduction to statistical analysis in dental research"
-    },
-    {
-      "code": "DENT6025",
-      "title": "Multivariable statistical analysis in dental research and use of statistical software"
-    }
-  ],
+  
   "ACCT": [
     { "code": "ACCT1101", "title": "Introduction to financial accounting" },
     { "code": "ACCT2102", "title": "Intermediate financial accounting I" },
@@ -1123,6 +529,120 @@ export default {
       "title": "Youth Mentoring for Social Justice and Inclusion"
     }
   ],
+  "BBMS": [
+    { "code": "BBMS2004", "title": "Introduction to Human Anatomy" },
+    {
+      "code": "BBMS2006",
+      "title": "Physiological Basis of Health and Disease"
+    },
+    { "code": "BBMS2007", "title": "Essential Molecular Biology" },
+    { "code": "BBMS2009", "title": "Introduction to Clinical Research" },
+    { "code": "BBMS3001", "title": "Medical Microbiology" },
+    { "code": "BBMS3002", "title": "Molecular Biology of the Cell" },
+    { "code": "BBMS3009", "title": "Genome Science" },
+    { "code": "BBMS3010", "title": "Emerging Infections" },
+    { "code": "BBMS3011", "title": "Molecular Neuroscience" },
+    { "code": "BBMS3018", "title": "Biomechanics and Biomedical Technologies" },
+    {
+      "code": "BBMS3012",
+      "title": "Stem Cell Biotechnologies in Regenerative Medicine"
+    },
+    { "code": "BBMS4003", "title": "Developmental Genetics" },
+    { "code": "BBMS4011FY", "title": "Biomedical Innovation Team Project" },
+    { "code": "BBMS1001", "title": "Human Biology" },
+    {
+      "code": "BBMS1002",
+      "title": "Fundamentals of Human Anatomy and Physiology"
+    },
+    { "code": "BBMS2001", "title": "Basic Biomedical Laboratory Techniques" },
+    { "code": "BBMS2003", "title": "Human Genetics" },
+    { "code": "BBMS2005", "title": "Biomedical Pharmacology" },
+    {
+      "code": "BBMS2008",
+      "title": "Contemporary Topics in Biomedical Technology"
+    },
+    {
+      "code": "BBMS2011",
+      "title": "Research Methods in Medicine and Health Sciences"
+    },
+    { "code": "BBMS3003", "title": "Mechanisms and Pathology of Diseases" },
+    { "code": "BBMS3004", "title": "Molecular Diagnostics Laboratory" },
+    { "code": "BBMS3005", "title": "Infection and Immunity" },
+    { "code": "BBMS3007", "title": "Cancer Biology" },
+    { "code": "BBMS3008", "title": "Essential Proteomics" },
+    { "code": "BBMS4001", "title": "Final Year Project" },
+    { "code": "BBMS4004", "title": "Public Health Genetics" },
+    { "code": "BBMS4011", "title": "Biomedical Innovation Team Project" }
+  ],
+  "BCHM": [
+    { "code": "BCHM1601", "title": "Foundation Theories of Chinese Medicine" },
+    { "code": "BCHM2601", "title": "Chinese Materia Medica" },
+    { "code": "BCHM2602", "title": "Archaic Chinese Medical Literature" },
+    {
+      "code": "BCHM2607FY",
+      "title": "Medical Ethics and Professionalism in Chinese Medicine Practice"
+    },
+    { "code": "BCHM3601", "title": "Canon of Chinese Medicine" },
+    { "code": "BCHM3602FY", "title": "Chinese Internal Medicine" },
+    { "code": "BCHM3605", "title": "Immunology" },
+    { "code": "BCHM3606FY", "title": "Pathology" },
+    { "code": "BCHM4604", "title": "Surgery of Chinese Medicine" },
+    { "code": "BCHM4605", "title": "Gynaecology of Chinese Medicine" },
+    { "code": "BCHM4606", "title": "Otorhinolaryngology of Chinese Medicine" },
+    { "code": "BCHM4608", "title": "Fundamentals of Diagnosis" },
+    { "code": "BCHM4608FY", "title": "Fundamentals of Diagnosis" },
+    {
+      "code": "BCHM5601",
+      "title": "Life Cultivation and Healthcare of Chinese Medicine"
+    },
+    { "code": "BCHM5603", "title": "Seasonal Febrile Diseases" },
+    {
+      "code": "BCHM5604",
+      "title": "Therapeutics in Acupuncture and Moxibustion"
+    },
+    { "code": "BCHM5608", "title": "Ophthalmology of Chinese Medicine" },
+    {
+      "code": "BCHM5610FY",
+      "title": "Chinese Medicine Clinical Attachment IV"
+    },
+    { "code": "BCHM6601FY", "title": "Clinical Clerkship" },
+    { "code": "BCHM1602", "title": "Diagnostics of Chinese Medicine" },
+    { "code": "BCHM1605", "title": "History of Chinese Medicine" },
+    { "code": "BCHM1901", "title": "Introduction to Chinese Medical Cultures" },
+    {
+      "code": "BCHM1905",
+      "title": "Resources and Quality Control of Chinese medicines"
+    },
+    { "code": "BCHM2603", "title": "Chinese Medicine Prescriptions" },
+    {
+      "code": "BCHM2607",
+      "title": "Medical Ethics and Professionalism in Chinese Medicine Practice"
+    },
+    { "code": "BCHM3602", "title": "Chinese Internal Medicine" },
+    { "code": "BCHM3603", "title": "Foundation of Acupuncture" },
+    { "code": "BCHM3606", "title": "Pathology" },
+    {
+      "code": "BCHM3801",
+      "title": "Introduction to Chinese Medicine and Nursing"
+    },
+    { "code": "BCHM4601", "title": "Treatise on Exogenous Febrile Diseases" },
+    {
+      "code": "BCHM4602",
+      "title": "Traumatology and Orthopaedics of Chinese Medicine"
+    },
+    { "code": "BCHM4603", "title": "Tui-na of Chinese Medicine" },
+    {
+      "code": "BCHM4610",
+      "title": "Evidence-based Practice and Public Health"
+    },
+    { "code": "BCHM5602", "title": "Golden Chamber" },
+    { "code": "BCHM5605", "title": "Schools of Thought of Chinese Medicine" },
+    { "code": "BCHM5606", "title": "Paediatrics of Chinese Medicine" },
+    { "code": "BCHM5607", "title": "Pharmacology of Chinese Medicine" },
+    { "code": "BCHM5609", "title": "Medicine" },
+    { "code": "BCHM5610", "title": "Chinese Medicine Clinical Attachment IV" },
+    { "code": "BCHM6601", "title": "Clinical Clerkship" }
+  ],
   "BECE": [
     { "code": "BECE1001", "title": "Early Childhood Development" },
     {
@@ -1281,6 +801,57 @@ export default {
     },
     { "code": "BMED2500", "title": "Biomedical signals and linear systems" },
     { "code": "BMED2600", "title": "Biomechanics for biomedical engineering" }
+  ],
+  "BMSC": [
+    { "code": "BMSC1101", "title": "Life Science I" },
+    { "code": "BMSC2102", "title": "Life Science II" },
+    { "code": "BMSC3104", "title": "Life Science IV" },
+    { "code": "BMSC2203", "title": "Life Science III" }
+  ],
+  "BMSN": [
+    { "code": "BMSN1101", "title": "Foundation of Life Science" },
+    { "code": "BMSN2101", "title": "Life Science I" },
+    { "code": "BMSN3101", "title": "Life Science III" },
+    { "code": "BMSN2202", "title": "Life Science II" }
+  ],
+  "BPHM": [
+    { "code": "BPHM2114", "title": "Anatomy, Physiology & Pathophysiology II" },
+    { "code": "BPHM2137", "title": "Essential Organic Chemistry" },
+    { "code": "BPHM2141", "title": "Pharmacology and Clinical Pharmacy I" },
+    { "code": "BPHM3115", "title": "Microbiology and Immunology" },
+    { "code": "BPHM3132", "title": "Dosage Form Design" },
+    { "code": "BPHM3143", "title": "Pharmacology and Clinical Pharmacy III" },
+    { "code": "BPHM3144", "title": "Pharmacology and Clinical Pharmacy IV" },
+    {
+      "code": "BPHM3151",
+      "title": "Principles of Pharmacognosy, Herbal Medicines & Nutraceuticals"
+    },
+    { "code": "BPHM4124", "title": "Pharmacy Practice III" },
+    { "code": "BPHM4135", "title": "Industrial Drug Development" },
+    { "code": "BPHM4148", "title": "Clinical Pharmacy" },
+    { "code": "BPHM4151", "title": "Cosmetic Science" },
+    { "code": "BPHM2123", "title": "Pharmacy Practice II" },
+    { "code": "BPHM2131", "title": "Physicochemical Principles of Pharmacy" },
+    {
+      "code": "BPHM2136",
+      "title": "Physical Chemistry: Principles and Applications in Pharmaceutical Sciences"
+    },
+    { "code": "BPHM2142", "title": "Pharmacology and Clinical Pharmacy II" },
+    {
+      "code": "BPHM3133",
+      "title": "Medicinal Chemistry for Pharmacy Students"
+    },
+    { "code": "BPHM3134", "title": "Advanced Pharmaceutics" },
+    { "code": "BPHM3145", "title": "Pharmacology and Clinical Pharmacy V" },
+    { "code": "BPHM3146", "title": "Advanced Pharmacology" },
+    { "code": "BPHM4125", "title": "Pharmacy Practice IV" },
+    { "code": "BPHM4143", "title": "Epidemiology and Precision Medicine" },
+    { "code": "BPHM4147", "title": "Toxicology & Drug Abuse" },
+    {
+      "code": "BPHM4149",
+      "title": "Clinical Pharmacology & Advanced Clinical Pharmacy"
+    },
+    { "code": "BPHM4152", "title": "Chinese Medicine for Pharmacy Students" }
   ],
   "BSCD": [
     {
@@ -2642,6 +2213,62 @@ export default {
     },
     { "code": "CLIT6016", "title": "Guided reading II" }
   ],
+  "CMED": [
+    { "code": "CMED2004", "title": "Behavioural Sciences I" },
+    { "code": "CMED6000", "title": "Capstone" },
+    { "code": "CMED6000FY", "title": "Capstone" },
+    { "code": "CMED6100", "title": "Introduction to Biostatistics" },
+    { "code": "CMED6107", "title": "Advanced Immunology" },
+    { "code": "CMED6200", "title": "Introduction to Epidemiology" },
+    { "code": "CMED6201", "title": "Principles of Public Health" },
+    { "code": "CMED6203", "title": "Measurement in Health" },
+    { "code": "CMED6204", "title": "Health and Society" },
+    { "code": "CMED6224", "title": "Practicum" },
+    { "code": "CMED6224FY", "title": "Practicum" },
+    { "code": "CMED6227", "title": "Biological Basis of Disease" },
+    { "code": "CMED6269", "title": "Introduction to Medical Law" },
+    { "code": "CMED6271", "title": "Bioethics Foundations" },
+    { "code": "CMED6272", "title": "The Physician-patient Relationship" },
+    {
+      "code": "CMED6275",
+      "title": "The Legal Foundations of Global Health and Development"
+    },
+    { "code": "CMED6300", "title": "Intermediate Epidemiology" },
+    { "code": "CMED6704", "title": "Health Behaviour and Communication" },
+    { "code": "CMED6901", "title": "Health leadership and management" },
+    { "code": "CMED7100", "title": "Introduction to Biostatistics" },
+    { "code": "CMED7200", "title": "Introduction to Epidemiology" },
+    { "code": "CMED2005", "title": "Behavioural Sciences II" },
+    { "code": "CMED6020", "title": "Advanced Statistical Methods I" },
+    { "code": "CMED6030", "title": "Advanced Epidemiological Methods I" },
+    {
+      "code": "CMED6104",
+      "title": "Emerging infectious diseases and \"one health\""
+    },
+    { "code": "CMED6105", "title": "Infectious Diseases in Public Health" },
+    {
+      "code": "CMED6109",
+      "title": "Accounting and Financial Management in Health Care"
+    },
+    { "code": "CMED6202", "title": "The Practice of Public Health" },
+    { "code": "CMED6211", "title": "Infectious Disease Epidemiology" },
+    { "code": "CMED6217", "title": "Qualitative Health Research" },
+    {
+      "code": "CMED6218",
+      "title": "Human Health: Futures in a Globalized World"
+    },
+    { "code": "CMED6250", "title": "The Regulation of Biomedical Research" },
+    { "code": "CMED6274", "title": "The Beginning and End of Life" },
+    { "code": "CMED6291", "title": "Mental Disability and the Law" },
+    { "code": "CMED6900", "title": "Health Policy and Politics" },
+    { "code": "CMED6902", "title": "Health Economics" },
+    { "code": "CMED6907", "title": "Perspectives in Health Care Management" },
+    { "code": "CMED6909", "title": "Comparing Systems of Elder Care" },
+    {
+      "code": "CMED6912",
+      "title": "Environmental health hazards and interventions"
+    }
+  ],
   "COMP": [
     { "code": "COMP1117", "title": "Computer programming" },
     { "code": "COMP2113", "title": "Programming technologies" },
@@ -2805,6 +2432,267 @@ export default {
     {
       "code": "CUND9003",
       "title": "Cantonese for Non-Cantonese Speaking Students"
+    }
+  ],
+
+  "DENT": [
+    { "code": "DENT1001", "title": "Dentistry: Integrated Semester I" },
+    { "code": "DENT2001", "title": "Dentistry: Integrated Semester III" },
+    { "code": "DENT3001", "title": "Dentistry: Integrated Semester V" },
+    { "code": "DENT4001", "title": "Dentistry: Integrated Semester VII" },
+    { "code": "DENT5001", "title": "Dentistry: Integrated Semester IX" },
+    { "code": "DENT6101", "title": "Dentistry: Integrated Semester XI" },
+    {
+      "code": "DENT7100FY",
+      "title": "Capstone Experience: Clinical Portfolio I"
+    },
+    {
+      "code": "DENT7101FY",
+      "title": "Capstone Experience: Clinical Portfolio II"
+    },
+    {
+      "code": "DENT7102FY",
+      "title": "Capstone Experience: Clinical Portfolio III"
+    },
+    { "code": "DENT7103FY", "title": "Endodontic consultation clinic I" },
+    { "code": "DENT7104FY", "title": "Endodontic consultation clinic II" },
+    { "code": "DENT7105FY", "title": "Endodontic consultation clinic III" },
+    { "code": "DENT7106FY", "title": "Endodontics introduction" },
+    { "code": "DENT7107FY", "title": "Joint (interdisciplinary) seminars I" },
+    { "code": "DENT7108FY", "title": "Joint (interdisciplinary) seminars II" },
+    { "code": "DENT7109FY", "title": "Joint (interdisciplinary) seminars III" },
+    { "code": "DENT7110FY", "title": "Operative technique fundamentals" },
+    { "code": "DENT7111FY", "title": "Practical endodontic techniques" },
+    { "code": "DENT7112FY", "title": "Practical endodontic techniques" },
+    { "code": "DENT7113FY", "title": "Practical endodontic techniques" },
+    { "code": "DENT7114FY", "title": "Publication and presentations" },
+    { "code": "DENT7115FY", "title": "Research I" },
+    { "code": "DENT7116FY", "title": "Research II" },
+    { "code": "DENT7117FY", "title": "Research III" },
+    { "code": "DENT7118FY", "title": "Supervised clinical practice I" },
+    { "code": "DENT7119FY", "title": "Supervised clinical practice II" },
+    { "code": "DENT7120FY", "title": "Supervised clinical practice III" },
+    { "code": "DENT7121FY", "title": "Tutorials in the discipline - Year 1" },
+    { "code": "DENT7122FY", "title": "Tutorials in the discipline - Year 2" },
+    { "code": "DENT7123FY", "title": "Tutorials in the discipline - Year 3" },
+    {
+      "code": "DENT7150FY",
+      "title": "Capstone Experience: Clinical Portfolio"
+    },
+    { "code": "DENT7151FY", "title": "Clinical Implant Dentistry I" },
+    { "code": "DENT7152FY", "title": "Clinical Implant Dentistry II" },
+    { "code": "DENT7153FY", "title": "Clinical Implant Dentistry III" },
+    { "code": "DENT7154FY", "title": "Comprehensive Treatment Planning I" },
+    { "code": "DENT7155FY", "title": "Comprehensive Treatment Planning II" },
+    { "code": "DENT7156FY", "title": "Comprehensive Treatment Planning III" },
+    { "code": "DENT7157FY", "title": "Evaluating Scientific Research I" },
+    { "code": "DENT7158FY", "title": "Evaluating Scientific Research II" },
+    {
+      "code": "DENT7159FY",
+      "title": "Implant Dentistry for Surgical Disciplines I"
+    },
+    {
+      "code": "DENT7160FY",
+      "title": "Implant Dentistry for Surgical Disciplines II"
+    },
+    { "code": "DENT7161FY", "title": "Original Research" },
+    { "code": "DENT7162FY", "title": "Research project I" },
+    { "code": "DENT7163FY", "title": "Research Project II" },
+    {
+      "code": "DENT7200FY",
+      "title": "Capstone Experience: Clinical Portfolio"
+    },
+    { "code": "DENT7201FY", "title": "Clinical Skill I" },
+    { "code": "DENT7202FY", "title": "Clinical Skill II" },
+    {
+      "code": "DENT7205FY",
+      "title": "Principles of Oral & Maxillofacial Surgery II"
+    },
+    { "code": "DENT7207FY", "title": "Research Project" },
+    {
+      "code": "DENT7250FY",
+      "title": "Capstone Experience: Clinical Portfolio"
+    },
+    { "code": "DENT7251FY", "title": "Clinical orthodontics 1" },
+    { "code": "DENT7253FY", "title": "Clinical orthodontics 3" },
+    { "code": "DENT7255FY", "title": "Original Research 3" },
+    {
+      "code": "DENT7256FY",
+      "title": "Orthodontic diagnosis and treatment planning 1"
+    },
+    {
+      "code": "DENT7258FY",
+      "title": "Orthodontic diagnosis and treatment planning 3"
+    },
+    {
+      "code": "DENT7300FY",
+      "title": "Capstone Experience: Clinical Portfolio"
+    },
+    { "code": "DENT7301FY", "title": "Clinical Paediatric Dentistry" },
+    { "code": "DENT7302FY", "title": "Didactic Paediatric Dentistry" },
+    { "code": "DENT7303FY", "title": "Research Project" },
+    { "code": "DENT7350FY", "title": "Basic Perio Science I" },
+    { "code": "DENT7351FY", "title": "Basic Perio Science II" },
+    { "code": "DENT7352FY", "title": "Basic Perio Science III" },
+    {
+      "code": "DENT7353FY",
+      "title": "Capstone Experience: Clinical Portfolio"
+    },
+    {
+      "code": "DENT7354FY",
+      "title": "Case Presentations plus Clinical Topics"
+    },
+    { "code": "DENT7355FY", "title": "Classic Literature I" },
+    { "code": "DENT7356FY", "title": "Classic Literature II" },
+    { "code": "DENT7357FY", "title": "Classic Literature III" },
+    { "code": "DENT7358FY", "title": "Clinic (incl. pre-clinic)" },
+    { "code": "DENT7359FY", "title": "Current Literature I" },
+    { "code": "DENT7360FY", "title": "Current Literature II" },
+    { "code": "DENT7361FY", "title": "Current Literature III" },
+    { "code": "DENT7362FY", "title": "Joint Sessions I" },
+    { "code": "DENT7363FY", "title": "Joint Sessions II" },
+    { "code": "DENT7364FY", "title": "Joint Sessions III" },
+    { "code": "DENT7365FY", "title": "Project Report and Oral Examination" },
+    { "code": "DENT7505", "title": "Biomaterials I" },
+    { "code": "DENT7506", "title": "Biomaterials II" },
+    {
+      "code": "DENT6023",
+      "title": "Oral epidemiology and clinical research methodology"
+    },
+    { "code": "DENT1002", "title": "Dentistry: Integrated Semester II" },
+    { "code": "DENT1030", "title": "Clinical Skills Block" },
+    { "code": "DENT2002", "title": "Dentistry: Integrated Semester IV" },
+    { "code": "DENT2030", "title": "Clinical Skills Block" },
+    { "code": "DENT3002", "title": "Dentistry: Integrated Semester VI" },
+    { "code": "DENT3030", "title": "Clinical Skills Block" },
+    { "code": "DENT4002", "title": "Dentistry: Integrated Semester VIII" },
+    { "code": "DENT4030", "title": "Clinical Skills Block" },
+    { "code": "DENT5002", "title": "Dentistry: Integrated Semester X" },
+    { "code": "DENT5030", "title": "Clinical Skills Block" },
+    { "code": "DENT5032", "title": "Community Health" },
+    { "code": "DENT6102", "title": "Dentistry: Integrated Semester XII" },
+    { "code": "DENT6130", "title": "Clinical Skills Block" },
+    { "code": "DENT6131", "title": "International Capstone Experience" },
+    {
+      "code": "DENT7030",
+      "title": "Dissertation Writing for Master of Dental Surgery and Master of Science \u2013 An Induction Course"
+    },
+    {
+      "code": "DENT7031",
+      "title": "Insights into stem cells and tissue engineering in dentistry"
+    },
+    {
+      "code": "DENT7032",
+      "title": "Diagnostic and advanced dental and maxillofacial imaging"
+    },
+    {
+      "code": "DENT7100",
+      "title": "Capstone Experience: Clinical Portfolio I"
+    },
+    {
+      "code": "DENT7101",
+      "title": "Capstone Experience: Clinical Portfolio II"
+    },
+    {
+      "code": "DENT7102",
+      "title": "Capstone Experience: Clinical Portfolio III"
+    },
+    { "code": "DENT7103", "title": "Endodontic consultation clinic I" },
+    { "code": "DENT7104", "title": "Endodontic consultation clinic II" },
+    { "code": "DENT7105", "title": "Endodontic consultation clinic III" },
+    { "code": "DENT7106", "title": "Endodontics introduction" },
+    { "code": "DENT7107", "title": "Joint (interdisciplinary) seminars I" },
+    { "code": "DENT7108", "title": "Joint (interdisciplinary) seminars II" },
+    { "code": "DENT7109", "title": "Joint (interdisciplinary) seminars III" },
+    { "code": "DENT7110", "title": "Operative technique fundamentals" },
+    { "code": "DENT7111", "title": "Practical endodontic techniques" },
+    { "code": "DENT7112", "title": "Practical endodontic techniques" },
+    { "code": "DENT7113", "title": "Practical endodontic techniques" },
+    { "code": "DENT7114", "title": "Publication and presentations" },
+    { "code": "DENT7115", "title": "Research I" },
+    { "code": "DENT7116", "title": "Research II" },
+    { "code": "DENT7117", "title": "Research III" },
+    { "code": "DENT7118", "title": "Supervised clinical practice I" },
+    { "code": "DENT7119", "title": "Supervised clinical practice II" },
+    { "code": "DENT7120", "title": "Supervised clinical practice III" },
+    { "code": "DENT7121", "title": "Tutorials in the discipline - Year 1" },
+    { "code": "DENT7122", "title": "Tutorials in the discipline - Year 2" },
+    { "code": "DENT7123", "title": "Tutorials in the discipline - Year 3" },
+    { "code": "DENT7150", "title": "Capstone Experience: Clinical Portfolio" },
+    { "code": "DENT7151", "title": "Clinical Implant Dentistry I" },
+    { "code": "DENT7152", "title": "Clinical Implant Dentistry II" },
+    { "code": "DENT7153", "title": "Clinical Implant Dentistry III" },
+    { "code": "DENT7154", "title": "Comprehensive Treatment Planning I" },
+    { "code": "DENT7155", "title": "Comprehensive Treatment Planning II" },
+    { "code": "DENT7156", "title": "Comprehensive Treatment Planning III" },
+    { "code": "DENT7157", "title": "Evaluating Scientific Research I" },
+    { "code": "DENT7158", "title": "Evaluating Scientific Research II" },
+    {
+      "code": "DENT7159",
+      "title": "Implant Dentistry for Surgical Disciplines I"
+    },
+    {
+      "code": "DENT7160",
+      "title": "Implant Dentistry for surgical disciplines II"
+    },
+    { "code": "DENT7161", "title": "Original Research" },
+    { "code": "DENT7162", "title": "Research Project I" },
+    { "code": "DENT7163", "title": "Research Project II" },
+    {
+      "code": "DENT7164",
+      "title": "Comprehensive Decision Making with Dental Implants"
+    },
+    { "code": "DENT7200", "title": "Capstone Experience: Clinical Portfolio" },
+    { "code": "DENT7201", "title": "Clinical Skill I" },
+    { "code": "DENT7202", "title": "Clinical Skill II" },
+    {
+      "code": "DENT7204",
+      "title": "Principles of Oral & Maxillofacial Surgery I"
+    },
+    {
+      "code": "DENT7205",
+      "title": "Principles of Oral & Maxillofacial Surgery II"
+    },
+    { "code": "DENT7207", "title": "Research Project" },
+    { "code": "DENT7250", "title": "Capstone Experience: Clinical Portfolio" },
+    { "code": "DENT7251", "title": "Clinical orthodontics 1" },
+    { "code": "DENT7253", "title": "Clinical orthodontics 3" },
+    { "code": "DENT7255", "title": "Original Research 3" },
+    {
+      "code": "DENT7256",
+      "title": "Orthodontic diagnosis and treatment planning 1"
+    },
+    {
+      "code": "DENT7258",
+      "title": "Orthodontic diagnosis and treatment planning 3"
+    },
+    { "code": "DENT7300", "title": "Capstone Experience: Clinical Portfolio" },
+    { "code": "DENT7301", "title": "Clinical Paediatric Dentistry" },
+    { "code": "DENT7302", "title": "Didactic Paediatric Dentistry" },
+    { "code": "DENT7303", "title": "Research Project" },
+    { "code": "DENT7350", "title": "Basic Perio Science I" },
+    { "code": "DENT7351", "title": "Basic Perio Science II" },
+    { "code": "DENT7352", "title": "Basic Perio Science III" },
+    { "code": "DENT7353", "title": "Capstone Experience: Clinical Portfolio" },
+    { "code": "DENT7354", "title": "Case Presentations plus Clinical Topics" },
+    { "code": "DENT7355", "title": "Classic Literature I" },
+    { "code": "DENT7356", "title": "Classic Literature II" },
+    { "code": "DENT7357", "title": "Classic Literature III" },
+    { "code": "DENT7358", "title": "Clinic (incl. pre-clinic)" },
+    { "code": "DENT7359", "title": "Current Literature I" },
+    { "code": "DENT7360", "title": "Current Literature II" },
+    { "code": "DENT7361", "title": "Current Literature III" },
+    { "code": "DENT7362", "title": "Joint Sessions I" },
+    { "code": "DENT7363", "title": "Joint Sessions II" },
+    { "code": "DENT7364", "title": "Joint Sessions III" },
+    { "code": "DENT7365", "title": "Project Report and Oral Examination" },
+    {
+      "code": "DENT6024",
+      "title": "Introduction to statistical analysis in dental research"
+    },
+    {
+      "code": "DENT6025",
+      "title": "Multivariable statistical analysis in dental research and use of statistical software"
     }
   ],
   "EASC": [
@@ -4902,6 +4790,120 @@ export default {
     },
     { "code": "MUSI4003", "title": "Dissertation (capstone experience)" },
     { "code": "MUSI7001", "title": "Research Methods in Music" }
+  ],
+  "NURS": [
+    { "code": "NURS1300", "title": "Nursing Foundations" },
+    { "code": "NURS3300", "title": "Nursing Care of the Adult II" },
+    { "code": "NURS3506", "title": "Nursing Care of the Adult II" },
+    { "code": "NURS4306", "title": "Introduction to Nursing Research" },
+    { "code": "NURS4502", "title": "Consolidation Practicum" },
+    { "code": "NURS5303", "title": "Evidence Based Practice" },
+    { "code": "NURS1506", "title": "Nursing & Public Health" },
+    { "code": "NURS1509", "title": "Families in Health & Illness" },
+    { "code": "NURS1514", "title": "Nursing Knowledge and Practice" },
+    { "code": "NURS2511", "title": "Professional Issues in Nursing" },
+    { "code": "NURS2521", "title": "Chronic Disease Management" },
+    { "code": "NURS3511", "title": "Community Nursing and Public Health" },
+    {
+      "code": "NURS7102",
+      "title": "Research Methods for Health Professionals"
+    },
+    { "code": "NURS7106", "title": "Epidemiology and Critical Appraisal" },
+    { "code": "NURS7201", "title": "Legal and Ethical Issues in Nursing" },
+    { "code": "NURS7302FY", "title": "Dissertation" },
+    { "code": "NURS8224", "title": "Translational Nursing Research" },
+    { "code": "NURS8225", "title": "Foundation of Infection Control" },
+    {
+      "code": "NURS8231",
+      "title": "Managing Clients with Complex Surgical and Health Problems"
+    },
+    {
+      "code": "NURS8239",
+      "title": "Advanced Practice Nursing Roles in Critical Care"
+    },
+    { "code": "NURS8245", "title": "Managing Emergencies in Critical Care" },
+    {
+      "code": "NURS8249",
+      "title": "Human Resources and Information Management"
+    },
+    {
+      "code": "NURS8250",
+      "title": "Organizational Development and Global Trend"
+    },
+    { "code": "NURS1302", "title": "Health Promotion & Education" },
+    { "code": "NURS2301", "title": "Nursing Care of the Adult I" },
+    { "code": "NURS2302", "title": "Nursing Practicum I" },
+    { "code": "NURS3301", "title": "Nursing Care of the Adult III" },
+    { "code": "NURS3302", "title": "Nursing Theories and Models" },
+    { "code": "NURS3304", "title": "Nursing Practicum IIa" },
+    { "code": "NURS3305", "title": "Nursing Practicum IIb" },
+    { "code": "NURS4302", "title": "Statistics" },
+    { "code": "NURS4304", "title": "Community and Global Health Nursing I" },
+    { "code": "NURS4305", "title": "Gerontological Nursing" },
+    { "code": "NURS4307", "title": "Nursing Practicum IIIa" },
+    { "code": "NURS4308", "title": "Nursing Practicum IIIb" },
+    { "code": "NURS5304", "title": "Nursing Practicum IVa" },
+    { "code": "NURS5305", "title": "Nursing Practicum IVb" },
+    {
+      "code": "NURS8228",
+      "title": "Administration and Responsibility of the Infection Control Team"
+    },
+    {
+      "code": "NURS1513",
+      "title": "Promoting the Health of Individuals and Populations"
+    },
+    { "code": "NURS1515", "title": "Health Assessment" },
+    { "code": "NURS1517", "title": "Introduction to Nursing Research" },
+    { "code": "NURS2506", "title": "Management & Leadership in Health Care" },
+    { "code": "NURS2510", "title": "Epidemiology and Population Health" },
+    { "code": "NURS3504", "title": "Mental Health Nursing" },
+    { "code": "NURS3505", "title": "Advanced Nursing Care of the Adult" },
+    { "code": "NURS7101", "title": "Philosophy & Science of Nursing" },
+    { "code": "NURS7103", "title": "Health Maintenance and Promotion" },
+    { "code": "NURS7105", "title": "Advanced Health Assessment" },
+    { "code": "NURS7302", "title": "Dissertation" },
+    { "code": "NURS8102", "title": "Health Care Systems and Policy" },
+    {
+      "code": "NURS8205",
+      "title": "Tobacco Dependency Nursing Intervention and Management"
+    },
+    {
+      "code": "NURS8207",
+      "title": "Advanced Practice in Public Health Nursing: Assessment of Aggregate Need"
+    },
+    { "code": "NURS8222", "title": "Statistical Practice in Health Sciences" },
+    { "code": "NURS8226", "title": "Infection Control in Practice" },
+    {
+      "code": "NURS8232",
+      "title": "Therapeutic Nurse-client Relationships in Advanced Surgical Nursing"
+    },
+    {
+      "code": "NURS8233",
+      "title": "Advanced Practice Nursing Roles in Surgical Nursing"
+    },
+    {
+      "code": "NURS8247",
+      "title": "Managing Change & Innovation and Nursing Leadership"
+    },
+    {
+      "code": "NURS8248",
+      "title": "Operations Management and Quality & Safety"
+    }
+  ],
+  "PHAR": [
+    { "code": "PHAR3334", "title": "Clinical Pharmacology for Nurses" },
+    { "code": "PHAR4612", "title": "Clinical Pharmacology" },
+    { "code": "PHAR6100", "title": "Principles of Drug Action" },
+    {
+      "code": "PHAR6201",
+      "title": "Advanced drug delivery and drug development"
+    },
+    { "code": "PHAR6203", "title": "Vascular biology and therapeutics" },
+    {
+      "code": "PHAR6202",
+      "title": "Drugs for the treatment of heart and lung diseases"
+    },
+    { "code": "PHAR7300", "title": "Therapeutic Antibodies" }
   ],
   "PHIL": [
     {

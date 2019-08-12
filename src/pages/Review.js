@@ -1,7 +1,9 @@
 import React from "react";
 import axios from "axios";
-import { Table, Spin, Select, TreeSelect } from "antd";
+import { Table, Spin, Select, TreeSelect,PageHeader} from "antd";
 import hkuCourses2019 from "../hkuCourses2019";
+import Rater from '../components/Rater'
+
 const { Option } = Select;
 const { TreeNode } = TreeSelect;
 
@@ -18,8 +20,10 @@ export const Review = () => {
   const [rating, changeRating] = React.useState(3);
   const [error, changeError] = React.useState("");
   const [loading, changeLoading] = React.useState(false);
+  const desc = ['terrible', 'bad', 'normal', 'good', 'wonderful'];
 
   const handleSubmit = event => {
+    console.log("rating is"+rating)
     changeLoading(true);
     event.preventDefault();
     changeError("");
@@ -39,31 +43,18 @@ export const Review = () => {
         changeLoading(false);
       });
   };
+// Object.keys(hkuCourses2019).sort().map(department=>{
+// console.log(department)
+//   })
 
+  const sortedKeys=Object.keys(hkuCourses2019).sort();
+console.log(sortedKeys)
+
+ console.log("length is=")
   return (
+    
     <div>
-      <Table
-        columns={[
-          {
-            title: "Course",
-            dataIndex: "course",
-            key: "course"
-          },
-          {
-            title: "Rating",
-            dataIndex: "rating",
-            key: "rating"
-          }
-        ]}
-        dataSource={reviewed}
-      />
-      {error && <div>Error: {error}</div>}
-      {loading && (
-        <Spin
-          size="large"
-          style={{ display: "flex", justifyContent: "center", margin: 5 }}
-        />
-      )}
+     <PageHeader onBack={() => null} title="Choose Wisely Form" subTitle="Please fill the form" />,
       <form
         onSubmit={handleSubmit}
         style={{
@@ -83,7 +74,8 @@ export const Review = () => {
             0
           }
         >
-          {Object.keys(hkuCourses2019).map(department => (
+          
+          {sortedKeys.map(department => (
             <Option value={department}>{department}</Option>
           ))}
         </Select>
@@ -105,7 +97,7 @@ export const Review = () => {
             ))}
           </Select>
         )}
-        <input
+        {/* <input
           name="rating"
           type="number"
           value={rating}
@@ -113,11 +105,40 @@ export const Review = () => {
           max="5"
           onChange={e => changeRating(e.target.value)}
           style={{ margin: 5 }}
-        />
+        /> */}
+        <Rater/>
+        {/* <span>
+        <Rate tooltips={desc} onChange={e => changeRating(rating)} rating={rating} />
+        {rating ? <span className="ant-rate-text">{desc[rating - 1]}</span> : ''}
+      </span> */}
         <button type="submit" disabled={loading}>
           Submit
         </button>
       </form>
+      <Table
+        style={{marginTop:"50px"}}
+        columns={[
+          {
+            title: "Course",
+            dataIndex: "course",
+            key: "course"
+          },
+          {
+            title: "Rating",
+            dataIndex: "rating",
+            key: "rating"
+          },
+          
+        ]}
+        dataSource={reviewed}
+      />
+      {error && <div>Error: {error}</div>}
+      {loading && (
+        <Spin
+          size="large"
+          style={{ display: "flex", justifyContent: "center", margin: 5 }}
+        />
+      )}
     </div>
   );
 };

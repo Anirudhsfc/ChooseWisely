@@ -1,6 +1,6 @@
 import React from "react";
 import axios from "axios";
-import { Table, Spin, Select, TreeSelect, PageHeader, Rate, Button, Menu, Dropdown, Icon,Divider } from "antd";
+import { Table, Spin, Select, TreeSelect, PageHeader, Rate, Button, Menu, Dropdown, Icon, Divider, Radio, Popover,Alert } from "antd";
 import hkuCourses2019 from "../hkuCourses2019";
 import Rater from '../components/Rater'
 import { Review } from "./Review";
@@ -14,12 +14,22 @@ const GOOGLE_FORM_DIFFICULTY_ID = "entry.735150427";
 const GOOGLE_FORM_PROF_AND_TEACHING_STYLE_ID = "entry.673465336";
 const GOOGLE_FORM_GRADE_ID = "entry.1616532046";
 const GOOGLE_FORM_RATING_ID = "entry.1058459762";
+const GOOGLE_FORM_RECOM_ID = "entry.647093475"; //Recommendation yes or no ID
+
 const GOOGLE_FORM_ACTION_URL =
     "https://docs.google.com/forms/u/1/d/e/1FAIpQLSfgI9Xlc_kBUGEB5ryLFb-L0b0XDvVS6QhTVCiEINZgGaKLkA/formResponse";
 const CORS_PROXY = "https://cors-anywhere.herokuapp.com/";
 
 const sortedKeys = Object.keys(hkuCourses2019).sort();
 const desc = ['terrible', 'bad', 'normal', 'good', 'wonderful'];
+const descDifficulty = ['very easy', 'easy', 'normal', 'hard', 'challenging'];
+
+const content = (
+    <div>
+        <p>Review cannot be changed after submission</p>
+
+    </div>
+);
 
 class ReviewPage extends React.Component {
 
@@ -36,7 +46,10 @@ class ReviewPage extends React.Component {
             loading: false,
             grade: '',
             prof: 3,
-            difficulty:3
+            difficulty: 3,
+            recom: 1,
+            msgRecom: 'Yes',
+            showOrNot:false
         }
 
         this.handleSubmit = this.handleSubmit.bind(this)
@@ -48,10 +61,14 @@ class ReviewPage extends React.Component {
         this.changeSelectedDepartment = this.changeSelectedDepartment.bind(this)
         this.changeGrade = this.changeGrade.bind(this)
         this.changeProf = this.changeProf.bind(this)
-        this.changeDifficulty=this.changeDifficulty.bind(this)
-
+        this.changeDifficulty = this.changeDifficulty.bind(this)
+        this.changeRecommendation = this.changeRecommendation.bind(this)
+        this.onClickInfo=this.onClickInfo.bind(this)
     }
 
+    onClickInfo(){
+       alert("You cannot change your review after submission")
+    }
 
     changeCourse = value => {
 
@@ -111,6 +128,12 @@ class ReviewPage extends React.Component {
             difficulty: value
         })
     }
+    changeRecommendation = e => {
+        console.log("recommendation is=" + e.target.value)
+        this.setState({
+            recom: e.target.value
+        })
+    }
     handleSubmit = event => {
         event.preventDefault()
 
@@ -120,27 +143,40 @@ class ReviewPage extends React.Component {
         const error = this.state.error
         const loading = this.state.loading
         const reviewed = this.state.reviewed
-        const difficulty=this.state.difficulty
-        const prof=this.state.prof
-        const grade=this.state.grade
-        console.log("rating is" + rating)
-        console.log("course is" + course)
-        console.log("error is" + error)
-        console.log("loading is" + loading)
-        console.log("reviewed is" + reviewed)
-        console.log("rating is" + rating)
-        // event.preventDefault();
+        const difficulty = this.state.difficulty
+        const prof = this.state.prof
+        const grade = this.state.grade
+        const recom = this.state.recom
+        var msgRecom = this.state.msgRecom
+        console.log("RECOM IS=" + recom)
+        if (recom == 0)
+            msgRecom = 'No'
+        else
+            msgRecom = 'Yes'
+        // console.log("rating is" + rating)
+        // console.log("course is" + course)
+        // console.log("error is" + error)
+        // console.log("loading is" + loading)
+        // console.log("reviewed is" + reviewed)
+        // console.log("rating is" + rating)
+        // console.log("recom is" + recom)
+        // // event.preventDefault();
+
         this.changeError("");
         const formData = new FormData();
         formData.append(GOOGLE_FORM_COURSE_ID, course);
         formData.append(GOOGLE_FORM_DIFFICULTY_ID, difficulty);
         formData.append(GOOGLE_FORM_PROF_AND_TEACHING_STYLE_ID, prof);
         formData.append(GOOGLE_FORM_GRADE_ID, grade);
+        formData.append(GOOGLE_FORM_RECOM_ID, recom);
         formData.append(GOOGLE_FORM_RATING_ID, rating);
+
+
         axios
             .post(CORS_PROXY + GOOGLE_FORM_ACTION_URL, formData)
             .then(() => {
-                this.changeReviewed([...reviewed, { course,difficulty,prof,grade,rating }]);
+
+                this.changeReviewed([...reviewed, { course, difficulty, prof, grade, msgRecom, rating }]);
                 this.changeCourse("");
                 this.changeRating(3);
                 this.changeLoading(false);
@@ -159,51 +195,54 @@ class ReviewPage extends React.Component {
 
 
 
-            <div>
+            <div >
                 <PageHeader onBack={() => null} title="Choose Wisely Form" subTitle="Please fill the form" />,
                   <form
                     onSubmit={this.handleSubmit}
                     style={{
                         display: "flex",
-                        justifyContent: "center",
-                        alignItems: "center"
+                        // justifyContent: "center",
+                        // alignItems: "center"
+                        marginLeft: "20px"
                     }}
                 >
-                    <Select
-                        showSearch
-                        style={{ width: 200, margin: 5 }}
-                        placeholder="Select a department"
-                        optionFilterProp="children"
-                        onChange={value => this.changeSelectedDepartment(value)}
-                        filterOption={(input, option) =>
-                            option.props.children.toLowerCase().indexOf(input.toLowerCase()) >=
-                            0
-                        }
-                    >
+                    <div style={{ display: "flex", flexDirection: "column" }}>
+                        <div style={{ display: "flex", flexDirection: "row" }}>
+                            <Select
+                                showSearch
+                                style={{ width: 200, margin: 5 }}
+                                placeholder="Select a department"
+                                optionFilterProp="children"
+                                onChange={value => this.changeSelectedDepartment(value)}
+                                filterOption={(input, option) =>
+                                    option.props.children.toLowerCase().indexOf(input.toLowerCase()) >=
+                                    0
+                                }
+                            >
 
-                        {sortedKeys.map(department => (
-                            <Option value={department}>{department}</Option>
-                        ))}
-                    </Select>
-                    {this.state.selectedDepartment && (
-                        <Select
-                            showSearch
-                            style={{ width: 500, margin: 5 }}
-                            placeholder="Select a course"
-                            optionFilterProp="children"
-                            onChange={value => this.changeCourse(value)}
-                            filterOption={(input, option) =>
-                                option.props.children
-                                    .toLowerCase()
-                                    .indexOf(input.toLowerCase()) >= 0
-                            }
-                        >
-                            {hkuCourses2019[this.state.selectedDepartment].map(({ code, title }) => (
-                                <Option value={`${code} ${title}`}>{`${code} ${title}`}</Option>
-                            ))}
-                        </Select>
-                    )}
-                    {/* <input
+                                {sortedKeys.map(department => (
+                                    <Option value={department}>{department}</Option>
+                                ))}
+                            </Select>
+                            {this.state.selectedDepartment && (
+                                <Select
+                                    showSearch
+                                    style={{ width: 500, margin: 5 }}
+                                    placeholder="Select a course"
+                                    optionFilterProp="children"
+                                    onChange={value => this.changeCourse(value)}
+                                    filterOption={(input, option) =>
+                                        option.props.children
+                                            .toLowerCase()
+                                            .indexOf(input.toLowerCase()) >= 0
+                                    }
+                                >
+                                    {hkuCourses2019[this.state.selectedDepartment].map(({ code, title }) => (
+                                        <Option value={`${code} ${title}`}>{`${code} ${title}`}</Option>
+                                    ))}
+                                </Select>
+                            )}
+                            {/* <input
                       name="rating"
                       type="number"
                       value={rating}
@@ -214,53 +253,73 @@ class ReviewPage extends React.Component {
                     /> */}
 
 
-                    {/* {this.state.rating ? <span className="ant-rate-text">{desc[this.state.rating - 1]}</span> : ''} */}
-                    <div style={{ display: "flex", flexDirection: "column"}}>
-                        <Rate tooltips={desc} onChange={this.changeDifficulty} value={this.state.difficulty} />
-                        Course Difficulty
+                            {/* {this.state.rating ? <span className="ant-rate-text">{desc[this.state.rating - 1]}</span> : ''} */}
                         </div>
-                        <Divider type="vertical"></Divider>
-                      
-                        <div style={{ display: "flex", flexDirection: "column" }}>
-                        <Rate tooltips={desc} onChange={this.changeProf} value={this.state.prof} />
-                        Professor and Teaching style
+                        <div style={{ display: "flex", flexDirection: "row", marginBottom: "30px", marginTop: "20px" }}>
+                            <div style={{ display: "flex", flexDirection: "column", marginLeft: "10px" }}>
+                                <Rate tooltips={descDifficulty} onChange={this.changeDifficulty} value={this.state.difficulty} />
+                                Course Difficulty
                         </div>
-                    
 
-                    <Select
-
-                        style={{ width: 150, margin: 5 }}
-                        placeholder="Your Grade"
-                        optionFilterProp="children"
-                        onChange={value => this.changeGrade(value)}
-                        filterOption={(input, option) =>
-                            option.props.children.toLowerCase().indexOf(input.toLowerCase()) >=
-                            0
-                        }
-                    >
-
-
-                        <Option value="A+">A+</Option>
-                        <Option value="A">A</Option>
-                        <Option value="A-">A-</Option>
-                        <Option value="B+">B+</Option>
-                        <Option value="B">B</Option>
-                        <Option value="B-">B-</Option>
-                        <Option value="C+">C+</Option>
-                        <Option value="C">C</Option>
-                        <Option value="C-">C-</Option>
-                        <Option value="D+">D+</Option>
-                        <Option value="D">D</Option>
-                        <Option value="D-">D-</Option>
-
-
-                    </Select>
-                    <div style={{ display: "flex", flexDirection: "column" }}>
-                        <Rate tooltips={desc} onChange={this.changeRating} value={this.state.rating} />
-                        Overall Rating
+                            <Divider type="vertical"></Divider>
+                            <div style={{ display: "flex", flexDirection: "column", marginRight: "10px" }}>
+                                <Rate tooltips={desc} onChange={this.changeProf} value={this.state.prof} />
+                                Professor and Teaching style
                         </div>
-                    <Button type="primary" htmlType="submit" className="login-form-button">SUBMIT</Button>
+
+
+
+                            <Select
+
+                                style={{ width: 150, margin: 5 }}
+                                placeholder="Your Grade"
+                                optionFilterProp="children"
+                                onChange={value => this.changeGrade(value)}
+                                filterOption={(input, option) =>
+                                    option.props.children.toLowerCase().indexOf(input.toLowerCase()) >=
+                                    0
+                                }
+                            >
+
+
+                                <Option value="A+">A+</Option>
+                                <Option value="A">A</Option>
+                                <Option value="A-">A-</Option>
+                                <Option value="B+">B+</Option>
+                                <Option value="B">B</Option>
+                                <Option value="B-">B-</Option>
+                                <Option value="C+">C+</Option>
+                                <Option value="C">C</Option>
+                                <Option value="C-">C-</Option>
+                                <Option value="D+">D+</Option>
+                                <Option value="D">D</Option>
+                                <Option value="D-">D-</Option>
+
+
+                            </Select>
+                        </div>
+                        <div style={{ display: "flex", flexDirection: "row", marginBottom: "20px" }}>
+                            <div style={{ display: "flex", flexDirection: "column", marginLeft: "10px", marginRight: "10px" }}>
+                                <Radio.Group name="radiogroup" defaultValue={1} onChange={this.changeRecommendation} value={this.state.recom}>
+                                    <Radio value={1}>Yes</Radio>
+                                    <Radio value={0}>No</Radio>
+
+                                </Radio.Group>
+                                Would you recommend this course?
+                    </div>
+                            <div style={{ display: "flex", flexDirection: "column", marginRight: "10px" }}>
+                                <Rate tooltips={desc} onChange={this.changeRating} value={this.state.rating} />
+                                Overall Rating
+                        </div>
+                        </div>
+                        <Popover content={content}  >
+                        <Button type="primary" htmlType="submit" className="login-form-button" style={{ maxWidth: "120px" }}>SUBMIT</Button>
+                        </Popover>
+                    </div>
                 </form>
+                
+                
+                
                 <Table
                     style={{ marginTop: "50px" }}
                     columns={[
@@ -285,6 +344,11 @@ class ReviewPage extends React.Component {
                             key: "grade"
                         },
 
+                        {
+                            title: "Recommendation",
+                            dataIndex: "msgRecom",
+                            key: "msgRecom"
+                        },
                         {
                             title: "Rating",
                             dataIndex: "rating",

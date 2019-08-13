@@ -381,7 +381,7 @@ class ReviewPage extends React.Component {
                     )
                 }
 
-                <div>Device Test!</div>
+                {/* <div>Device Test!</div>
                 <MediaQuery query='(min-device-width: 1224px)'>
                     <div>You are a desktop or laptop</div>
 
@@ -400,7 +400,8 @@ class ReviewPage extends React.Component {
                 </MediaQuery>
                 <MediaQuery query='(min-resolution: 2dppx)'>
                     <div>You are retina</div>
-                </MediaQuery>
+                </MediaQuery> */}
+                
                 {/* <Row>
                     <Col xs={2} sm={4} md={6} lg={8} xl={10}>
                         Col

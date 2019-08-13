@@ -17,7 +17,7 @@ function App() {
       <Link to="/mainPage">MainPage</Link> */}
       {/* <Link to="/review">REVIEW</Link>
       <Link to="/reviewPage">REVIEW PAGE</Link> */}
-      <Route path="/" exact component={MainPage} />
+      <Route path="/" exact component={ReviewPage} />
       <Route path="/mainPage" component={MainPage} />
       <Route path="/coursePage1" component={Page1} />
       <Route path="/account" component={AccountPage} />

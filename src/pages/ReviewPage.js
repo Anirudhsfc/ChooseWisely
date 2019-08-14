@@ -196,213 +196,411 @@ class ReviewPage extends React.Component {
         return (
 
 
-
             <div >
-                <Row>
-                    <Col xs={{span:12}} sm={4} md={6} lg={8} xl={10}>
-                        <PageHeader onBack={() => null} title="Choose Wisely Form" subTitle="Please fill the form" />,
-                </Col>
-                </Row>
 
-                <form
-                    onSubmit={this.handleSubmit}
-                    style={{
-                        // display: "flex",
-                        // justifyContent: "center",
-                        // alignItems: "center"
-                        marginLeft: "20px"
-                    }}
-                >
-                    
-                        
+                <MediaQuery query='(max-device-width: 767px)'>
+                <div style={{fontSize:"30px"}}>
+                    <Row>
+                        <Col>
                             
-                            <Row>
-                                <Col xs={{span:24}} sm={24} md={24} lg={10} xl={10}>
-                                <Select
-                                    showSearch
-                                    style={{ width: 200, margin: 5 }}
-                                    placeholder="Select a department"
-                                    optionFilterProp="children"
-                                    onChange={value => this.changeSelectedDepartment(value)}
-                                    filterOption={(input, option) =>
-                                        option.props.children.toLowerCase().indexOf(input.toLowerCase()) >=
-                                        0
-                                    }
-                                >
-                                
+                            <PageHeader style={{marginBottom:"10px",marginLeft:"10px"}}onBack={() => null} title="Choose Wisely Form" subTitle="Please fill the form" />
+                        
+                    </Col>
+                    </Row>
+                    <Row>
 
-                                    {sortedKeys.map(department => (
-                                        <Option value={department}>{department}</Option>
-                                    ))}
-                                </Select>
-                                </Col>
-                                <Col xs={{span:12}} sm={12} md={12} lg={14} xl={14}>
-                                {this.state.selectedDepartment && (
+                        <form
+                            onSubmit={this.handleSubmit}
+                            style={{
+                                // display: "flex",
+                                // justifyContent: "center",
+                                // alignItems: "center"
+                                marginLeft: "20px"
+                            }}
+                        >
+
+
+                            <Row>
+
+                                <Col xs={{ span: 24 }} sm={24} md={24} lg={10} xl={10}>
                                     <Select
+                                        size="large"
                                         showSearch
-                                        style={{ width: 500, margin: 5 }}
-                                        placeholder="Select a course"
+                                        style={{ width: 200, margin: 5}}
+                                        placeholder="Select a department"
                                         optionFilterProp="children"
-                                        onChange={value => this.changeCourse(value)}
+                                        onChange={value => this.changeSelectedDepartment(value)}
                                         filterOption={(input, option) =>
-                                            option.props.children
-                                                .toLowerCase()
-                                                .indexOf(input.toLowerCase()) >= 0
+                                            option.props.children.toLowerCase().indexOf(input.toLowerCase()) >=
+                                            0
                                         }
                                     >
-                                        {hkuCourses2019[this.state.selectedDepartment].map(({ code, title }) => (
-                                            <Option value={`${code} ${title}`}>{`${code} ${title}`}</Option>
+
+
+                                        {sortedKeys.map(department => (
+                                            <Option style={{height:"40px",fontSize:"20px"}}value={department}>{department}</Option>
                                         ))}
                                     </Select>
-                                   
-                                    
-                                )}
-                                 </Col>
-                                 </Row>
-                           
-                    
-                       
-                                <Row style={{marginTop:"20px"}}>
-                                    <Col xs={{span:24}} sm={24} md={24} lg={8} xl={8}>
-                                <Rate tooltips={descDifficulty} onChange={this.changeDifficulty} value={this.state.difficulty} style={{marginBottom:"10px"}} />
-                                Course Difficulty
                                 </Col>
-                               
-                            <Col xs={{span:24}} sm={24} md={24} lg={10} xl={8}>
-                                <Rate tooltips={desc} onChange={this.changeProf} value={this.state.prof} style={{marginBottom:"10px"}}/>
-                                Professor and Teaching style
-                      
+                                <Col xs={{ span: 12 }} sm={12} md={12} lg={14} xl={14}>
+                                    {this.state.selectedDepartment && (
+                                        <Select
+                                            size="large"
+                                            showSearch
+                                            style={{ width: 500, margin: 5 }}
+                                            placeholder="Select a course"
+                                            optionFilterProp="children"
+                                            onChange={value => this.changeCourse(value)}
+                                            filterOption={(input, option) =>
+                                                option.props.children
+                                                    .toLowerCase()
+                                                    .indexOf(input.toLowerCase()) >= 0
+                                            }
+                                        >
+                                            {hkuCourses2019[this.state.selectedDepartment].map(({ code, title }) => (
+                                                <Option style={{height:"40px",fontSize:"20px"}} value={`${code} ${title}`}>{`${code} ${title}`}</Option>
+                                            ))}
+                                        </Select>
 
+
+                                    )}
                                 </Col>
-                                <Col xs={{span:12}} sm={12} md={12} lg={6} xl={8}>
-
-                            <Select
-
-                                style={{ width: 150, margin: 5 }}
-                                placeholder="Your Grade"
-                                optionFilterProp="children"
-                                onChange={value => this.changeGrade(value)}
-                                filterOption={(input, option) =>
-                                    option.props.children.toLowerCase().indexOf(input.toLowerCase()) >=
-                                    0
-                                }
-                            >
 
 
-                                <Option value="A+">A+</Option>
-                                <Option value="A">A</Option>
-                                <Option value="A-">A-</Option>
-                                <Option value="B+">B+</Option>
-                                <Option value="B">B</Option>
-                                <Option value="B-">B-</Option>
-                                <Option value="C+">C+</Option>
-                                <Option value="C">C</Option>
-                                <Option value="C-">C-</Option>
-                                <Option value="D+">D+</Option>
-                                <Option value="D">D</Option>
-                                <Option value="D-">D-</Option>
 
-
-                            </Select>
-                            </Col>
-                        
                             </Row>
-                            <Row style={{marginTop:"30px",marginBottom:"20px"}}>
-                                <Col xs={{span:24}} sm={24} md={24} lg={12} xl={12}>
-                                <Radio.Group name="radiogroup" defaultValue={1} onChange={this.changeRecommendation} value={this.state.recom} style={{marginBottom:"20px"}}>
-                                    <Radio value={1}>Yes</Radio>
-                                    <Radio value={0}>No</Radio>
+                            <Row style={{ marginTop: "20px" }}>
+                                <Col xs={{ span: 24 }} sm={24} md={24} lg={8} xl={8}>
+                                    <Rate tooltips={descDifficulty} onChange={this.changeDifficulty} value={this.state.difficulty} style={styles.star} />
+                                    Course Difficulty
+                                </Col>
 
-                                </Radio.Group>
-                                Would you recommend this course?
+                                <Col xs={{ span: 24 }} sm={24} md={24} lg={10} xl={8}>
+                                    <Rate tooltips={desc} onChange={this.changeProf} value={this.state.prof} style={styles.star} />
+                                    Professor and Teaching style
+    
+    
                                 </Col>
-                                <Col xs={{span:12}} sm={{span:12}} md={{span:12}} lg={{span:12}} xl={{span:12}}>
-                                <Rate tooltips={desc} onChange={this.changeRating} value={this.state.rating} />
-                                Overall Rating
+                                <Col xs={{ span: 12 }} sm={12} md={12} lg={6} xl={8}>
+
+                                    <Select
+                                        size="large"
+                                        style={{marginTop:"20px"}}
+                                        placeholder="Your Grade"
+                                        optionFilterProp="children"
+                                        onChange={value => this.changeGrade(value)}
+                                        filterOption={(input, option) =>
+                                            option.props.children.toLowerCase().indexOf(input.toLowerCase()) >=
+                                            0
+                                        }
+                                    >
+
+
+                                        <Option style={{height:"40px",fontSize:"20px"}}value="A+">A+</Option>
+                                        <Option style={{height:"40px",fontSize:"20px"}}value="A">A</Option>
+                                        <Option style={{height:"40px",fontSize:"20px"}}value="A-">A-</Option>
+                                        <Option style={{height:"40px",fontSize:"20px"}}value="B+">B+</Option>
+                                        <Option style={{height:"40px",fontSize:"20px"}}value="B">B</Option>
+                                        <Option style={{height:"40px",fontSize:"20px"}}value="B-">B-</Option>
+                                        <Option style={{height:"40px",fontSize:"20px"}}value="C+">C+</Option>
+                                        <Option style={{height:"40px",fontSize:"20px"}}value="C">C</Option>
+                                        <Option style={{height:"40px",fontSize:"20px"}}value="C-">C-</Option>
+                                        <Option style={{height:"40px",fontSize:"20px"}}value="D+">D+</Option>
+                                        <Option style={{height:"40px",fontSize:"20px"}}value="D">D</Option>
+                                        <Option style={{height:"40px",fontSize:"20px"}}value="D-">D-</Option>
+
+
+                                    </Select>
                                 </Col>
-                                </Row>
-                                <Row>
-                        <Popover content={content}  >
-                            <Button type="primary" htmlType="submit" className="login-form-button" style={{ maxWidth: "120px" }}>SUBMIT</Button>
-                        </Popover>
-                        </Row>
+
+                            </Row>
+                            <Row style={{ marginTop: "30px", marginBottom: "20px" }}>
+                                <Col xs={{ span: 24 }} sm={24} md={24} lg={12} xl={12}>
+                                    <Radio.Group buttonStyle="solid"size="large" name="radiogroup" defaultValue={1} onChange={this.changeRecommendation} value={this.state.recom} style={{ marginBottom: "20px"}}>
+                                        <Radio  style={{fontSize:"20px"}} value={1}>Yes</Radio>
+                                        <Radio style={{fontSize:"20px"}} value={0}>No</Radio>
+
+                                    </Radio.Group>
+                                    Would you recommend this course?
+                                </Col>
+                                <Col xs={{ span: 12 }} sm={{ span: 12 }} md={{ span: 12 }} lg={{ span: 12 }} xl={{ span: 12 }}>
+                                    <Rate tooltips={desc} onChange={this.changeRating} value={this.state.rating} style={styles.star} />
+                                    Overall Rating
+                                </Col>
+                            </Row>
+                            <Row>
+                                <Popover content={content}  >
+                                    <Button type="primary" htmlType="submit" className="login-form-button" size="large" style={{minWidth:"150px",minHeight:"30px"}}>SUBMIT</Button>
+                                </Popover>
+                            </Row>
+
+                        </form>
+                    </Row>
+
+                    <h2 style={{ textAlign: "center", marginTop: "20px",fontSize:"30px" }}>Successfully Submitted Reviews</h2>
+                    <Row>
+                        <Col>
+                            <Table
+                                
+                                style={{ marginTop: "20px", height: "100%",fontSize:"30px" }}
+                                columns={[
+                                    {
+                                        title: "Course",
+                                        dataIndex: "course",
+                                        key: "course"
+                                    },
+                                    {
+                                        title: "Difficulty",
+                                        dataIndex: "difficulty",
+                                        key: "difficulty"
+                                    },
+                                    {
+                                        title: "Professor",
+                                        dataIndex: "prof",
+                                        key: "prof"
+                                    },
+                                    {
+                                        title: "Grade",
+                                        dataIndex: "grade",
+                                        key: "grade"
+                                    },
+
+                                    {
+                                        title: "Recommendation",
+                                        dataIndex: "msgRecom",
+                                        key: "msgRecom"
+                                    },
+                                    {
+                                        title: "Rating",
+                                        dataIndex: "rating",
+                                        key: "rating"
+                                    },
+
+                                ]}
+                                dataSource={this.state.reviewed}
+                            />
+                        </Col>
+                    </Row>
+
+                    {this.state.error && <div>Error: {this.state.error}</div>}
+                    {
+                        this.state.loading && (
+                            <Spin
+                                size="large"
+                                style={{ display: "flex", justifyContent: "center", margin: 5 }}
+                            />
+                        )
+                    }
+
                    
-                </form>
-
-
-                <h2 style={{ textAlign: "center", marginTop: "20px" }}>Successfully Submitted Reviews</h2>
-                <Table
-
-                    style={{ marginTop: "20px" }}
-                    columns={[
-                        {
-                            title: "Course",
-                            dataIndex: "course",
-                            key: "course"
-                        },
-                        {
-                            title: "Difficulty",
-                            dataIndex: "difficulty",
-                            key: "difficulty"
-                        },
-                        {
-                            title: "Professor",
-                            dataIndex: "prof",
-                            key: "prof"
-                        },
-                        {
-                            title: "Grade",
-                            dataIndex: "grade",
-                            key: "grade"
-                        },
-
-                        {
-                            title: "Recommendation",
-                            dataIndex: "msgRecom",
-                            key: "msgRecom"
-                        },
-                        {
-                            title: "Rating",
-                            dataIndex: "rating",
-                            key: "rating"
-                        },
-
-                    ]}
-                    dataSource={this.state.reviewed}
-                />
-
-                {this.state.error && <div>Error: {this.state.error}</div>}
-                {
-                    this.state.loading && (
-                        <Spin
-                            size="large"
-                            style={{ display: "flex", justifyContent: "center", margin: 5 }}
-                        />
-                    )
-                }
-
-                {/* <div>Device Test!</div>
-                <MediaQuery query='(min-device-width: 1224px)'>
-                    <div>You are a desktop or laptop</div>
-
-                    <MediaQuery query='(max-width: 1224px)'>
-                        <div>You are sized like a tablet or mobile phone though</div>
+</div>
                     </MediaQuery>
-                </MediaQuery>
-                <MediaQuery query='(max-device-width: 1224px)'>
-                    <div>You are a tablet or mobile phone</div>
-                </MediaQuery>
-                <MediaQuery query='(orientation: portrait)'>
+
+                    <MediaQuery query='(min-device-width: 767px)'>
+                    <div>
+                    <Row>
+                        <Col>
+                            <PageHeader onBack={() => null} title="Choose Wisely Form" subTitle="Please fill the form" />,
+                    </Col>
+                    </Row>
+                    <Row>
+
+                        <form
+                            onSubmit={this.handleSubmit}
+                            style={{
+                                // display: "flex",
+                                // justifyContent: "center",
+                                // alignItems: "center"
+                                marginLeft: "20px"
+                            }}
+                        >
+
+
+                            <Row>
+
+                                <Col xs={{ span: 24 }} sm={24} md={24} lg={10} xl={10}>
+                                    <Select
+                                     
+                                        showSearch
+                                        style={{ width: 200, margin: 5}}
+                                        placeholder="Select a department"
+                                        optionFilterProp="children"
+                                        onChange={value => this.changeSelectedDepartment(value)}
+                                        filterOption={(input, option) =>
+                                            option.props.children.toLowerCase().indexOf(input.toLowerCase()) >=
+                                            0
+                                        }
+                                    >
+
+
+                                        {sortedKeys.map(department => (
+                                            <Option value={department}>{department}</Option>
+                                        ))}
+                                    </Select>
+                                </Col>
+                                <Col xs={{ span: 12 }} sm={12} md={12} lg={14} xl={14}>
+                                    {this.state.selectedDepartment && (
+                                        <Select
+                                          
+                                            showSearch
+                                            style={{ width: 500, margin: 5 }}
+                                            placeholder="Select a course"
+                                            optionFilterProp="children"
+                                            onChange={value => this.changeCourse(value)}
+                                            filterOption={(input, option) =>
+                                                option.props.children
+                                                    .toLowerCase()
+                                                    .indexOf(input.toLowerCase()) >= 0
+                                            }
+                                        >
+                                            {hkuCourses2019[this.state.selectedDepartment].map(({ code, title }) => (
+                                                <Option  value={`${code} ${title}`}>{`${code} ${title}`}</Option>
+                                            ))}
+                                        </Select>
+
+
+                                    )}
+                                </Col>
+
+
+
+                            </Row>
+                            <Row style={{ marginTop: "20px" }}>
+                                <Col xs={{ span: 24 }} sm={24} md={24} lg={8} xl={8}>
+                                    <Rate tooltips={descDifficulty} onChange={this.changeDifficulty} value={this.state.difficulty} style={{}} />
+                                    Course Difficulty
+                                </Col>
+
+                                <Col xs={{ span: 24 }} sm={24} md={24} lg={10} xl={8}>
+                                    <Rate tooltips={desc} onChange={this.changeProf} value={this.state.prof} style={{}} />
+                                    Professor and Teaching style
+    
+    
+                                </Col>
+                                <Col xs={{ span: 12 }} sm={12} md={12} lg={6} xl={8}>
+
+                                    <Select
+                                    
+                                                style={{maxWidth:"200px"}}
+                                        placeholder="Your Grade"
+                                        optionFilterProp="children"
+                                        onChange={value => this.changeGrade(value)}
+                                        filterOption={(input, option) =>
+                                            option.props.children.toLowerCase().indexOf(input.toLowerCase()) >=
+                                            0
+                                        }
+                                    >
+
+
+                                        <Option value="A+">A+</Option>
+                                        <Option value="A">A</Option>
+                                        <Option value="A-">A-</Option>
+                                        <Option value="B+">B+</Option>
+                                        <Option value="B">B</Option>
+                                        <Option value="B-">B-</Option>
+                                        <Option value="C+">C+</Option>
+                                        <Option value="C">C</Option>
+                                        <Option value="C-">C-</Option>
+                                        <Option value="D+">D+</Option>
+                                        <Option value="D">D</Option>
+                                        <Option value="D-">D-</Option>
+
+
+                                    </Select>
+                                </Col>
+
+                            </Row>
+                            <Row style={{ marginTop: "30px", marginBottom: "20px" }}>
+                                <Col xs={{ span: 24 }} sm={24} md={24} lg={12} xl={12}>
+                                    <Radio.Group  name="radiogroup" defaultValue={1} onChange={this.changeRecommendation} value={this.state.recom} style={{ marginBottom: "20px"}}>
+                                        <Radio   value={1}>Yes</Radio>
+                                        <Radio  value={0}>No</Radio>
+
+                                    </Radio.Group>
+                                    Would you recommend this course?
+                                </Col>
+                                <Col xs={{ span: 12 }} sm={{ span: 12 }} md={{ span: 12 }} lg={{ span: 12 }} xl={{ span: 12 }}>
+                                    <Rate tooltips={desc} onChange={this.changeRating} value={this.state.rating} style={{}} />
+                                    Overall Rating
+                                </Col>
+                            </Row>
+                            <Row>
+                                <Popover content={content}  >
+                                    <Button type="primary" htmlType="submit" className="login-form-button"  >SUBMIT</Button>
+                                </Popover>
+                            </Row>
+
+                        </form>
+                    </Row>
+
+                    <h2 style={{ textAlign: "center", marginTop: "20px" }}>Successfully Submitted Reviews</h2>
+                    <Row>
+                        <Col>
+                            <Table
+
+                                style={{ marginTop: "20px", height: "100%" }}
+                                columns={[
+                                    {
+                                        title: "Course",
+                                        dataIndex: "course",
+                                        key: "course"
+                                    },
+                                    {
+                                        title: "Difficulty",
+                                        dataIndex: "difficulty",
+                                        key: "difficulty"
+                                    },
+                                    {
+                                        title: "Professor",
+                                        dataIndex: "prof",
+                                        key: "prof"
+                                    },
+                                    {
+                                        title: "Grade",
+                                        dataIndex: "grade",
+                                        key: "grade"
+                                    },
+
+                                    {
+                                        title: "Recommendation",
+                                        dataIndex: "msgRecom",
+                                        key: "msgRecom"
+                                    },
+                                    {
+                                        title: "Rating",
+                                        dataIndex: "rating",
+                                        key: "rating"
+                                    },
+
+                                ]}
+                                dataSource={this.state.reviewed}
+                            />
+                        </Col>
+                    </Row>
+
+                    {this.state.error && <div>Error: {this.state.error}</div>}
+                    {
+                        this.state.loading && (
+                            <Spin
+                                size="large"
+                                style={{ display: "flex", justifyContent: "center", margin: 5 }}
+                            />
+                        )
+                    }
+
+</div>
+                    </MediaQuery>
+                    {/* <MediaQuery query='(orientation: portrait)'>
                     <div>You are portrait</div>
-                </MediaQuery>
-                <MediaQuery query='(orientation: landscape)'>
+                </MediaQuery> */}
+                    {/* <MediaQuery query='(orientation: landscape)'>
                     <div>You are landscape</div>
                 </MediaQuery>
                 <MediaQuery query='(min-resolution: 2dppx)'>
                     <div>You are retina</div>
                 </MediaQuery> */}
-                
-                {/* <Row>
+
+                    {/* <Row>
                     <Col xs={2} sm={4} md={6} lg={8} xl={10}>
                         Col
                     </Col>
@@ -413,14 +611,25 @@ class ReviewPage extends React.Component {
                         Col
                     </Col>
                 </Row>, */}
-            </div >
 
-        );
+            </div>
+                );
+        
+            }
+        
+        
+        
+        }
+        
+const styles={
 
-    }
-
-
-
-}
-
+                    header: {
+                    backgroundColor: "red"
+            },
+    star:{
+                    fontSize: "38px",
+                marginBottom:"10px"
+            }
+        }
+        
 export default ReviewPage

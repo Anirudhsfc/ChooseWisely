@@ -3,6 +3,7 @@ import { version, Button, Input, PageHeader, Timeline } from 'antd'
 import "antd/dist/antd.css";
 import { Redirect } from 'react-router-dom'
 import Card from '../components/Card'
+import hkuCourses2019 from '../hkuCourses2019'
 // import config from '../config';
 import Tabletop from 'tabletop'
 // import load from '../spreadsheet';
@@ -60,7 +61,7 @@ class AccountPage extends Component {
         // console.log(element.coursecode)
         if(element.coursecode=="AAAA"){
             console.log(element.coursecode)
-            element["coursecode"]=element["coursecode"]+"A"
+            
         }
         // element["timestamp"]=Date.parse(element["displaydate"]);
     }
@@ -72,6 +73,8 @@ class AccountPage extends Component {
         this.setState({items:data})
         // console.log(this.state.items)
         data.forEach(element => {
+            console.log(element.Timestamp)
+            console.log(element.Course)
             // console.log("okay")
             // console.log(element.CourseCode);
 
@@ -81,11 +84,16 @@ class AccountPage extends Component {
 
     render() {
         return (
-            <div>
+            <div style={{display:"flex",flexDirection:"row"}}>
                 {this.state.items.map(item =>
-
-                    <Card title={item.CourseCode}></Card>
-
+    <div>
+                    {(item.Course=="ACCT1101 Introduction to financial accounting")?
+                        (<Card title={item.Course}></Card>)
+                        :
+                        (<Card title="error"></Card>)
+                    }
+               
+</div>
                 )}
             </div>
         )

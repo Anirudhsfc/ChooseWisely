@@ -4,10 +4,9 @@ import "antd/dist/antd.css";
 import { Redirect } from 'react-router-dom'
 import Card from '../components/Card'
 import hkuCourses2019 from '../hkuCourses2019'
-// import config from '../config';
+
 import Tabletop from 'tabletop'
-// import load from '../spreadsheet';
-// const url = `https://sheets.googleapis.com/v4/spreadsheets/${config.spreadsheetId}/values:batchGet?ranges=Sheet4&majorDimension=ROWS&key=${config.apiKey}`;
+
 // const publicSpreadsheetUrl = 'https://docs.google.com/spreadsheets/d/1hpvyH-a7TLNuAsHThBGew5xbUFF5FcJzCZfLCXX0fek/edit?usp=sharing';
 const publicSpreadsheetUrl = 'https://docs.google.com/spreadsheets/d/1BU_2zwmcmP7YZEjolxXWc9ZvCwa7Nc5TS5jeSdQNEn4/edit?usp=sharing';
 

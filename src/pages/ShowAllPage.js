@@ -4,8 +4,8 @@ import "antd/dist/antd.css";
 import Card from '../components/Card'
 import { Redirect } from 'react-router-dom'
 import hkuCourses2019 from '../hkuCourses2019'
-import Tabletop from 'tabletop'
-import CourseCard from '../components/CourseCard'
+// import Tabletop from 'tabletop'
+// import CourseCard from '../components/CourseCard'
 
 const { Search } = Input;
 const { Option } = Select
@@ -30,6 +30,8 @@ class ShowAllPage extends Component {
 
         this.changeCourse = this.changeCourse.bind(this)
         this.changeSelectedDepartment = this.changeSelectedDepartment.bind(this)
+        this.setRedirect=this.setRedirect.bind(this)
+        this.renderRedirect=this.renderRedirect.bind(this)
     }
 
     // componentDidMount(){
@@ -37,13 +39,13 @@ class ShowAllPage extends Component {
     // }
 
     changeCourse = value => {
-        console.log("value of course is=" + value)
+        // console.log("value of course is=" + value)
         this.setState({
             course: value
         })
     }
     changeSelectedDepartment = value => {
-        console.log("value of department  is=" + value)
+        // console.log("value of department  is=" + value)
         this.setState(
             {
                 selectedDepartment: value
@@ -63,8 +65,8 @@ class ShowAllPage extends Component {
         }
     }
     componentDidMount() {
-        console.log("inside component did mount")
-        console.log(this.state.department)
+        // console.log("inside component did mount")
+        // console.log(this.state.department)
 
         hkuCourses2019[this.state.department].map(({ code, title }) => (
 

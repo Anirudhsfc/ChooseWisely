@@ -37,7 +37,7 @@ class Cards extends Component {
   renderRedirect() {
     if (this.state.redirect == true) {
       return <Redirect to={{
-        pathname: '/',
+        pathname: '/mainPage',
         course: this.state.course
       }}></Redirect>
     }

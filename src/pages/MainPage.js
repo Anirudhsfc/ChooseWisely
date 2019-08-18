@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import { version, Button, Input, PageHeader, Timeline, Select, Icon, Spin, Rate, Row, Col, Statistic } from 'antd'
+import { Button, Input, PageHeader, Select,  Spin, Rate, Row, Col, Statistic } from 'antd'
 import "antd/dist/antd.css";
-import Card from '../components/Card'
+// import Card from '../components/Card'
 import { Redirect } from 'react-router-dom'
 import hkuCourses2019 from '../hkuCourses2019'
 import Tabletop from 'tabletop'
@@ -49,19 +49,19 @@ class MainPage extends Component {
 
     }
     changeGrade = value => {
-        console.log("grade is=" + value)
+        // console.log("grade is=" + value)
         this.setState({
             grade: value
         })
     }
     changeProf = value => {
-        console.log("prof  is=" + value)
+        // console.log("prof  is=" + value)
         this.setState({
             prof: value
         })
     }
     changeDifficulty = value => {
-        console.log("difficulty is=" + value)
+        // console.log("difficulty is=" + value)
         this.setState({
             difficulty: value
         })
@@ -69,8 +69,9 @@ class MainPage extends Component {
 
 
     refreshPage() {
+        //to be called when user clicks on the title of Choose Wisely
 
-        console.log("Refeshing")
+        // console.log("Refeshing")
         this.changeSelectedDepartment('')
 
         this.changeCourse("");
@@ -83,8 +84,10 @@ class MainPage extends Component {
 
     }
     componentDidMount() {
-        console.log("mounted")
-        console.log("course fromCard =" + this.state.courseFromCard)
+
+        //THIS IS CALLED WHEN THE USER COMES FROM THE SHOW ALL PAGE
+        // console.log("mounted")
+        // console.log("course fromCard =" + this.state.courseFromCard)
 
 
 
@@ -134,13 +137,13 @@ class MainPage extends Component {
         })
     }
     changeCourse = value => {
-        console.log("value of course is=" + value)
+        // console.log("value of course is=" + value)
         this.setState({
             course: value
         })
     }
     changeSelectedDepartment = value => {
-        console.log("value of department  is=" + value)
+        // console.log("value of department  is=" + value)
         this.setState(
             {
                 selectedDepartment: value
@@ -148,7 +151,7 @@ class MainPage extends Component {
         )
     }
     changeLoading = event => {
-        console.log("value ofloading  is=" + event)
+        // console.log("value ofloading  is=" + event)
 
         this.setState({
             loading: event
@@ -157,8 +160,8 @@ class MainPage extends Component {
 
     handleSearch() {
         this.changeLoading(true);
-        console.log("Searching" + this.state.course)
-        console.log("departmewnt is=" + this.state.selectedDepartment)
+        // console.log("Searching" + this.state.course)
+        // console.log("departmewnt is=" + this.state.selectedDepartment)
         if (this.state.course || this.state.selectedDepartment || this.state.flagFromCard) {
             this.init()
 
@@ -170,7 +173,7 @@ class MainPage extends Component {
     }
 
     init() {
-        console.log("inside init")
+        // console.log("inside init")
         Tabletop.init({
             key: publicSpreadsheetUrl,
             callback: this.showInfo,
@@ -180,6 +183,7 @@ class MainPage extends Component {
     }
     showInfo(data, tabletop) {
         if (this.state.course) {
+            //TO BE CALLED WHEN USER HAS SELECTED A PARTICULAR COURSE
             var tempDiff = 0
             var tempProf = 0
             var tempGrade = 0
@@ -191,7 +195,7 @@ class MainPage extends Component {
             var counterProf = 0
             var counterRecom = 0
             var counterRating = 0
-            console.log("successful")
+            // console.log("successful")
 
             // alert('Successfully processed!')
             // console.log(data);
@@ -202,7 +206,7 @@ class MainPage extends Component {
             data.forEach(element => {
 
                 if (element.Course === this.state.course) {
-                    console.log(element.Timestamp)
+                    // console.log(element.Timestamp)
                     counter = counter + 1
 
                     if (element.Grade == 'A+')
@@ -261,13 +265,13 @@ class MainPage extends Component {
             });
             this.changeLoading(false)
 
-            console.log("tempGrade=" + (tempGrade / (counter - subtractGrade)).toFixed(2))
-            console.log("tempProf=" + (tempProf / counterProf).toFixed(2))
-            console.log("tempdifficulty=" + (tempDiff / counterDiff).toFixed(2))
-            console.log("tempRating=" + tempRating / counterRating)
-            console.log("tempRecom=" + tempRecom / counterRecom)
+            // console.log("tempGrade=" + (tempGrade / (counter - subtractGrade)).toFixed(2))
+            // console.log("tempProf=" + (tempProf / counterProf).toFixed(2))
+            // console.log("tempdifficulty=" + (tempDiff / counterDiff).toFixed(2))
+            // console.log("tempRating=" + tempRating / counterRating)
+            // console.log("tempRecom=" + tempRecom / counterRecom)
             // console.log("counter without subtract enmpty=" + counter+subtractEmpty)
-            console.log("counter " + counter)
+            // console.log("counter " + counter)
 
             if (tempRecom >= Math.round(counterRecom / 2)) {
                 tempRecom = 1
@@ -305,8 +309,8 @@ class MainPage extends Component {
             else
                 tempGrade = 'F'
 
-            console.log("tempgrade=" + tempGrade)
-            console.log("tempRecom is =" + tempRecom)
+            // console.log("tempgrade=" + tempGrade)
+            // console.log("tempRecom is =" + tempRecom)
             this.setState({
 
                 difficulty: (tempDiff / counterDiff).toFixed(2),
@@ -323,8 +327,8 @@ class MainPage extends Component {
             this.changeLoading(false)
 
             this.setRedirectToShowAll()
-            //To list out all courses
-            console.log(this.state.selectedDepartment)
+            //To LIST OUT ALL THE COURSES
+            // console.log(this.state.selectedDepartment)
             // data.forEach(element => {
             //     if (element.Course.substring(0, 4) == this.state.selectedDepartment) {
 

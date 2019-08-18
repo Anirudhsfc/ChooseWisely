@@ -20,9 +20,9 @@ function App() {
       <Link to="/reviewPage">REVIEW PAGE</Link> */}
       <Route path="/" exact component={ReviewPage} />
       <Route path="/mainPage" component={MainPage} />
-      <Route path="/coursePage1" component={Page1} />
-      <Route path="/account" component={AccountPage} />
-      <Route path="/review" component={Review} />
+      {/* <Route path="/coursePage1" component={Page1} /> */}
+      {/* <Route path="/account" component={AccountPage} /> */}
+      {/* <Route path="/review" component={Review} /> */}
       <Route path="/reviewPage" component={ReviewPage}/>
       <Route path="/showAllPage" component={ShowAllPage}/>
     </HashRouter>

@@ -5,7 +5,7 @@ import { Redirect } from 'react-router-dom'
 import "antd/dist/antd.css";
 import { thisExpression } from '@babel/types';
 
-
+//to display the Grade distribution
 class Modals extends Component {
 
 
@@ -27,8 +27,8 @@ class Modals extends Component {
 
 
     showModal = () => {
-        console.log(this.state.data.length)
-        console.log("course is =" + this.state.course)
+        // console.log(this.state.data.length)
+        // console.log("course is =" + this.state.course)
         // console.log(this.state.data.Course)
         var ap = 0
         var a = 0
@@ -46,8 +46,8 @@ class Modals extends Component {
         this.state.data.map(item => {
          
             if (item.Course == this.state.course) {
-                console.log("item.Course="+item.Course)
-                console.log("item.Course="+item.Grade)
+                // console.log("item.Course="+item.Course)
+                // console.log("item.Course="+item.Grade)
                 if (item.Grade == 12)
                     ap = ap + 1
                 else if (item.Grade == 11)
@@ -141,7 +141,7 @@ class Modals extends Component {
     };
 
     handleOk = e => {
-        console.log(e);
+        // console.log(e);
         this.setState({
             visible: false,
             gradeArr:[],

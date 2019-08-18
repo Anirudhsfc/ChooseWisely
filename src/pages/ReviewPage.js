@@ -3,16 +3,17 @@ import axios from "axios";
 import { Table, Spin, Select, TreeSelect, PageHeader, Rate, Button, Menu, Dropdown, Icon, Divider, Radio, Popover, Alert, Row, Col } from "antd";
 import hkuCourses2019 from "../hkuCourses2019";
 import {Redirect } from 'react-router-dom'
-import Rater from '../components/Rater'
-import { Review } from "./Review";
+// import Rater from '../components/Rater'
+// import { Review } from "./Review";
 import '../styles.css'
-import Media from 'react-media'
+// import Media from 'react-media'
 import MediaQuery from 'react-responsive'
-import Comment from '../components/Comment'
+// import Comment from '../components/Comment'
 
 const { Option } = Select;
 const { TreeNode } = TreeSelect;
 
+//THESE ARE IDS FROM GOOGLE FORM
 const GOOGLE_FORM_COURSE_ID = "entry.513433922";
 const GOOGLE_FORM_DIFFICULTY_ID = "entry.735150427";
 const GOOGLE_FORM_PROF_AND_TEACHING_STYLE_ID = "entry.673465336";
@@ -87,7 +88,8 @@ class ReviewPage extends React.Component {
     }
 
     goBack(){
-        console.log("back button clicked")
+        //THIS FUCNTIUON IS NOT USED
+        // console.log("back button clicked")
         this.props.history.goBack()
     }
     onClickInfo() {
@@ -96,38 +98,38 @@ class ReviewPage extends React.Component {
 
     changeCourse = value => {
 
-        console.log("value of course is=" + value)
+        // console.log("value of course is=" + value)
         this.setState({
             course: value
         })
     }
     changeError = event => {
-        console.log("value of error is=" + event)
+        // console.log("value of error is=" + event)
         this.setState({
             error: event
         })
     }
     changeLoading = event => {
-        console.log("value ofloading  is=" + event)
+        // console.log("value ofloading  is=" + event)
 
         this.setState({
             loading: event
         })
     }
     changeRating = value => {
-        console.log("value of rating  is=" + value)
+        // console.log("value of rating  is=" + value)
 
         this.setState({
             rating: value
         })
     }
     changeReviewed = value => {
-        console.log("value of reveiwed is=" + value)
+        // console.log("value of reveiwed is=" + value)
 
         this.setState({ reviewed: value })
     }
     changeSelectedDepartment = value => {
-        console.log("value of department  is=" + value)
+        // console.log("value of department  is=" + value)
         this.setState(
             {
                 selectedDepartment: value
@@ -135,25 +137,25 @@ class ReviewPage extends React.Component {
         )
     }
     changeGrade = value => {
-        console.log("grade is=" + value)
+        // console.log("grade is=" + value)
         this.setState({
             grade: value
         })
     }
     changeProf = value => {
-        console.log("prof  is=" + value)
+        // console.log("prof  is=" + value)
         this.setState({
             prof: value
         })
     }
     changeDifficulty = value => {
-        console.log("difficulty is=" + value)
+        // console.log("difficulty is=" + value)
         this.setState({
             difficulty: value
         })
     }
     changeRecommendation = e => {
-        console.log("recommendation is=" + e.target.value)
+        // console.log("recommendation is=" + e.target.value)
         this.setState({
             recom: e.target.value
         })
@@ -172,7 +174,7 @@ class ReviewPage extends React.Component {
         const grade = this.state.grade
         const recom = this.state.recom
         var msgRecom = this.state.msgRecom
-        console.log("RECOM IS=" + recom)
+        // console.log("RECOM IS=" + recom)
         if (recom == 0)
             msgRecom = 'No'
         else
@@ -186,6 +188,7 @@ class ReviewPage extends React.Component {
         // console.log("recom is" + recom)
         // // event.preventDefault();
         if(course){
+            //IF NO COURSE HAS BEEN ENTERED IN EXCEL SHEET THEN WE DO NOT ENTER THIS
         this.changeError("");
         const formData = new FormData();
         formData.append(GOOGLE_FORM_COURSE_ID, course);
@@ -214,6 +217,7 @@ class ReviewPage extends React.Component {
                 this.changeLoading(false);
             });
         }else{
+            //TO ENSURE THAT USER SELECTS THE COURSE
             alert("Please select a course")
             this.changeLoading(false)
         }

@@ -3,7 +3,7 @@ import axios from "axios";
 import { Table, Spin, Select, TreeSelect,PageHeader} from "antd";
 import hkuCourses2019 from "../hkuCourses2019";
 import Rater from '../components/Rater'
-
+//MADE BY WAQAS BHAI AND USED AS REFERENCE TO MAKE REVIEW PAGE
 const { Option } = Select;
 const { TreeNode } = TreeSelect;
 

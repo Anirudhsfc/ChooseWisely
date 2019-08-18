@@ -1,6 +1,6 @@
 import { Rate } from 'antd';
 import React from 'react'
-
+//Not used as of now
 const desc = ['terrible', 'bad', 'normal', 'good', 'wonderful'];
 
 class Rater extends React.Component {

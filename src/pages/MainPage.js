@@ -241,15 +241,21 @@ class MainPage extends Component {
 
                     tempGrade = tempGrade + parseInt(element.Grade)
                     if (element.CourseDifficulty) {
+                        if(element.CourseDifficulty==0)
+                        element.CourseDifficulty=3
                         tempDiff = tempDiff + parseInt(element.CourseDifficulty)
                         counterDiff = counterDiff + 1
                     }
                     if (element.ProfAndTeachingStyle) {
+                        if(element.ProfAndTeachingStyle==0)
+                        element.ProfAndTeachingStyle=3
                         tempProf = tempProf + parseInt(element.ProfAndTeachingStyle)
                         counterProf = counterProf + 1
                     }
 
                     if (element.Rating) {
+                        if(element.Rating==0)
+                        element.Rating=3
                         tempRating = tempRating + parseInt(element.Rating)
                         counterRating = counterRating + 1
                     }

@@ -233,19 +233,22 @@ class ReviewPage extends React.Component {
                 <MediaQuery query='(max-device-width: 767px)'>
                 <div style={{fontSize:"30px"}}>
                     <Row>
-                        <Col>
+                        <Col span={24} onClick={this.refreshPage}>
                        
-                        <div style={{ padding: "20px", display: "flex", flexDirection: "row" }}>
+                        {/* <div style={{ padding: "20px", display: "flex", flexDirection: "row" }}> */}
 
-                        <div style={{ flexGrow: 6, }} onClick={this.refreshPage}>
+                        {/* <div style={{ flexGrow: 6, }} onClick={this.refreshPage}> */}
                             <PageHeader title="Welcome to Choose Wisely" subTitle="Choose smart, Choose Wise" />
-                        </div>
+                        {/* </div> */}
+                        </Col>
+                        <Col span={12}>
 
-                        <Button type="primary" size="large" style={{ flexGrow: 2, maxWidth: 200 }} onClick={this.setRedirect}>
+                        <Button type="primary" size="large" style={{ flexGrow: 2, maxWidth: 200,marginLeft:"25px",marginBottom:"10px" }} onClick={this.setRedirect}>
                              Search Courses
                         </Button>
-                        </div>                        
-                    </Col>
+                        </Col>
+                        {/* </div>                         */}
+                
                     </Row>
                     <Row>
 
@@ -440,18 +443,21 @@ class ReviewPage extends React.Component {
                     <div>
                     {this.renderRedirect()}
                     <Row>
-                        <Col>
-                        <div style={{ padding: "20px", display: "flex", flexDirection: "row" }}>
+                        <Col span={18}onClick={this.refreshPage}>
+                        {/* <div style={{ padding: "20px", display: "flex", flexDirection: "row" }}> */}
 
-<div style={{ flexGrow: 6, }} onClick={this.refreshPage}>
-    <PageHeader title="Welcome to Choose Wisely" subTitle="Choose smart, Choose Wise" />
-</div>
-
-<Button type="primary" size="large" style={{ flexGrow: 2, maxWidth: 200 }} onClick={this.setRedirect}>
-     Search Courses
-</Button>
-</div>       
+                    {/* <div style={{ flexGrow: 6, }} onClick={this.refreshPage}> */}
+             <PageHeader title="Welcome to Choose Wisely" subTitle="Choose smart, Choose Wise" />
+                    {/* </div> */}
                     </Col>
+                    <Col span={6}>
+
+                    <Button type="primary" size="large" style={{ flexGrow: 2, maxWidth: 200,marginTop:"15px" }} onClick={this.setRedirect}>
+                            Search Courses
+                        </Button>
+                                {/* </div>  */}
+                                </Col>      
+                    
                     </Row>
                     <Row>
 

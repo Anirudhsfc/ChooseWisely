@@ -17,7 +17,7 @@ class Rater extends React.Component {
     const { value } = this.state;
     return (
       <span>
-        <Rate tooltips={desc} onChange={this.handleChange} value={value} temp="temptext" />
+        <Rate allowClear={false}tooltips={desc} onChange={this.handleChange} value={value} temp="temptext" />
         {value ? <span className="ant-rate-text">{desc[value - 1]}</span> : ''}
       </span>
     );

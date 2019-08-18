@@ -56,7 +56,7 @@ class AddComment extends Component{
             value: '',
             comments: [
               {
-                author: 'Anirudh',
+                author: 'Anoynymous',
                 // avatar: 'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png',
                 content: <p>{this.state.value}</p>,
                 datetime: moment().fromNow(),

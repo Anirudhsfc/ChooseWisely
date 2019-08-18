@@ -2,11 +2,13 @@ import React from "react";
 import axios from "axios";
 import { Table, Spin, Select, TreeSelect, PageHeader, Rate, Button, Menu, Dropdown, Icon, Divider, Radio, Popover, Alert, Row, Col } from "antd";
 import hkuCourses2019 from "../hkuCourses2019";
+import {Redirect } from 'react-router-dom'
 import Rater from '../components/Rater'
 import { Review } from "./Review";
 import '../styles.css'
 import Media from 'react-media'
 import MediaQuery from 'react-responsive'
+import Comment from '../components/Comment'
 
 const { Option } = Select;
 const { TreeNode } = TreeSelect;
@@ -51,7 +53,9 @@ class ReviewPage extends React.Component {
             difficulty: 3,
             recom: 1,
             msgRecom: 'Yes',
-            showOrNot: false
+            showOrNot: false,
+            redirect:false
+           
         }
 
         this.handleSubmit = this.handleSubmit.bind(this)
@@ -66,8 +70,26 @@ class ReviewPage extends React.Component {
         this.changeDifficulty = this.changeDifficulty.bind(this)
         this.changeRecommendation = this.changeRecommendation.bind(this)
         this.onClickInfo = this.onClickInfo.bind(this)
+        this.goBack=this.goBack.bind(this)
+        this.setRedirect=this.setRedirect.bind(this)
+        this.renderRedirect=this.renderRedirect.bind(this)
+    }
+    setRedirect() {
+        this.setState({
+            redirect: true
+        })
+    }
+    renderRedirect() {
+
+        if (this.state.redirect == true) {
+            return <Redirect to='/mainPage'></Redirect>
+        }
     }
 
+    goBack(){
+        console.log("back button clicked")
+        this.props.history.goBack()
+    }
     onClickInfo() {
         alert("You cannot change your review after submission")
     }
@@ -154,7 +176,7 @@ class ReviewPage extends React.Component {
         if (recom == 0)
             msgRecom = 'No'
         else
-            msgRecom = 'Yes'
+            msgRecom = 'Yes' //Assuming that if the user does not select an option he or she is recommending it
         // console.log("rating is" + rating)
         // console.log("course is" + course)
         // console.log("error is" + error)
@@ -163,7 +185,7 @@ class ReviewPage extends React.Component {
         // console.log("rating is" + rating)
         // console.log("recom is" + recom)
         // // event.preventDefault();
-
+        if(course){
         this.changeError("");
         const formData = new FormData();
         formData.append(GOOGLE_FORM_COURSE_ID, course);
@@ -185,11 +207,16 @@ class ReviewPage extends React.Component {
                 this.changeDifficulty(3);
                 this.changeProf(3);
                 this.changeGrade("")
+                this.changeSelectedDepartment("")
             })
             .catch(() => {
                 this.changeError(error);
                 this.changeLoading(false);
             });
+        }else{
+            alert("Please select a course")
+            this.changeLoading(false)
+        }
     };
 
     render() {
@@ -197,14 +224,23 @@ class ReviewPage extends React.Component {
 
 
             <div >
-
+                     {/* <Button onClick={this.goBack}>Back</Button> */}
+                {this.renderRedirect()}
                 <MediaQuery query='(max-device-width: 767px)'>
                 <div style={{fontSize:"30px"}}>
                     <Row>
                         <Col>
-                            
-                            <PageHeader style={{marginBottom:"10px",marginLeft:"10px"}}onBack={() => null} title="Choose Wisely Form" subTitle="Please fill the form" />
-                        
+                       
+                        <div style={{ padding: "20px", display: "flex", flexDirection: "row" }}>
+
+                        <div style={{ flexGrow: 6, }} onClick={this.refreshPage}>
+                            <PageHeader title="Welcome to Choose Wisely" subTitle="Choose smart, Choose Wise" />
+                        </div>
+
+                        <Button type="primary" size="large" style={{ flexGrow: 2, maxWidth: 200 }} onClick={this.setRedirect}>
+                             Search Courses
+                        </Button>
+                        </div>                        
                     </Col>
                     </Row>
                     <Row>
@@ -271,12 +307,12 @@ class ReviewPage extends React.Component {
                             </Row>
                             <Row style={{ marginTop: "20px" }}>
                                 <Col xs={{ span: 24 }} sm={24} md={24} lg={8} xl={8}>
-                                    <Rate tooltips={descDifficulty} onChange={this.changeDifficulty} value={this.state.difficulty} style={styles.star} />
+                                    <Rate allowClear={false}  tooltips={descDifficulty} onChange={this.changeDifficulty} value={this.state.difficulty} style={styles.star} />
                                     Course Difficulty
                                 </Col>
 
                                 <Col xs={{ span: 24 }} sm={24} md={24} lg={10} xl={8}>
-                                    <Rate tooltips={desc} onChange={this.changeProf} value={this.state.prof} style={styles.star} />
+                                    <Rate allowClear={false} tooltips={desc} onChange={this.changeProf} value={this.state.prof} style={styles.star}  />
                                     Professor and Teaching style
     
     
@@ -324,7 +360,7 @@ class ReviewPage extends React.Component {
                                     Would you recommend this course?
                                 </Col>
                                 <Col xs={{ span: 12 }} sm={{ span: 12 }} md={{ span: 12 }} lg={{ span: 12 }} xl={{ span: 12 }}>
-                                    <Rate tooltips={desc} onChange={this.changeRating} value={this.state.rating} style={styles.star} />
+                                    <Rate allowClear={false} tooltips={desc} onChange={this.changeRating} value={this.state.rating} style={styles.star} />
                                     Overall Rating
                                 </Col>
                             </Row>
@@ -398,9 +434,19 @@ class ReviewPage extends React.Component {
 
                     <MediaQuery query='(min-device-width: 767px)'>
                     <div>
+                    {this.renderRedirect()}
                     <Row>
                         <Col>
-                            <PageHeader onBack={() => null} title="Choose Wisely Form" subTitle="Please fill the form" />,
+                        <div style={{ padding: "20px", display: "flex", flexDirection: "row" }}>
+
+<div style={{ flexGrow: 6, }} onClick={this.refreshPage}>
+    <PageHeader title="Welcome to Choose Wisely" subTitle="Choose smart, Choose Wise" />
+</div>
+
+<Button type="primary" size="large" style={{ flexGrow: 2, maxWidth: 200 }} onClick={this.setRedirect}>
+     Search Courses
+</Button>
+</div>       
                     </Col>
                     </Row>
                     <Row>
@@ -587,6 +633,8 @@ class ReviewPage extends React.Component {
                             />
                         )
                     }
+
+                 
 
 </div>
                     </MediaQuery>

@@ -12,7 +12,7 @@ class CourseCard extends Component {
         return (
 
             <div style={{padding:"20px"}}>
-                <Card title={this.props.title} extra={<p>Voted by 40 students</p>} style={{ width: 500, height: "auto" }}>
+                <Card title={this.props.title} extra={`Reviewed By: `+this.props.extra+` people`} style={{ width: "auto", height: 200,maxWidth: 600 }}>
                     {/* <p style={{fontSize:"large"}}>COMP2121</p> */}
                     <p style={{ fontSize: "medium" }}>{this.props.desc}</p>
                     <p style={{ fontWeight: "bold", fontSize: "large" }}>Average Grade: {this.props.grade}</p>
@@ -20,9 +20,8 @@ class CourseCard extends Component {
                 <br/>
                 <br/>
 
-                <p style={{fontSize:"large"}}>Comments</p>
 
-            <AddComment/>
+            {/* <AddComment/> */}
 
 
             </div>

@@ -85,7 +85,7 @@ class AccountPage extends Component {
         return (
             <div style={{display:"flex",flexDirection:"row"}}>
                 {this.state.items.map(item =>
-    <div>
+        <div>
                     {(item.Course=="ACCT1101 Introduction to financial accounting")?
                         (<Card title={item.Course}></Card>)
                         :

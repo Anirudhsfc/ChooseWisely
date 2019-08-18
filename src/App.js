@@ -8,6 +8,7 @@ import AccountPage from "./pages/AccountPage";
 import { Review } from "./pages/Review";
 import LoginPage from "./pages/LoginPage";
 import ReviewPage from './pages/ReviewPage'
+import ShowAllPage from './pages/ShowAllPage'
 
 console.log("inside App.js");
 function App() {
@@ -23,6 +24,7 @@ function App() {
       <Route path="/account" component={AccountPage} />
       <Route path="/review" component={Review} />
       <Route path="/reviewPage" component={ReviewPage}/>
+      <Route path="/showAllPage" component={ShowAllPage}/>
     </HashRouter>
     // <Button type="primary" size="large">HI I AM PUBLISHED</Button>
   );

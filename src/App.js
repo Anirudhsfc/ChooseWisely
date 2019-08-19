@@ -1,4 +1,5 @@
 import React from "react";
+import ReactGA from 'react-ga';
 import { Button } from "antd";
 import "./App.css";
 import MainPage from "../src/pages/MainPage";
@@ -10,8 +11,15 @@ import LoginPage from "./pages/LoginPage";
 import ReviewPage from './pages/ReviewPage'
 import ShowAllPage from './pages/ShowAllPage'
 
+
+function initializeReactGA() {
+  console.log("analysinggggg")
+  ReactGA.initialize('UA-123791717-1');
+  ReactGA.pageview('/');
+}
 console.log("inside App.js");
 function App() {
+  initializeReactGA()
   return (
     <HashRouter basename="/ChooseWisely">
       {/* <Link to="/">Home</Link>

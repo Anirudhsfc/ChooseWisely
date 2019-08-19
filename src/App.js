@@ -14,7 +14,7 @@ import ShowAllPage from './pages/ShowAllPage'
 
 function initializeReactGA() {
   console.log("analysinggggg")
-  ReactGA.initialize('UA-123791717-1');
+  ReactGA.initialize('UA-145900740-1');
   ReactGA.pageview('/');
 }
 console.log("inside App.js");
